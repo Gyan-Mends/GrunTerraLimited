@@ -5,7 +5,6 @@
 @import url(https://fonts.googleapis.com/css?family=Sen:regular,500,600,700,800);
 
 @import "tailwindcss";
-@plugin './hero.ts';
 
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
