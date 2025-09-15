@@ -10,6 +10,26 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+export const meta = () => [
+  { title: "Grun Terra Limited | Construction Company" },
+  {
+    name: "description",
+    content:
+      "Grun Terra Limited is a trusted construction company delivering quality, on-time projects across residential, commercial and infrastructure sectors.",
+  },
+  { name: "theme-color", content: "#0ea5b8" },
+  { property: "og:site_name", content: "Grun Terra Limited" },
+  { property: "og:type", content: "website" },
+  { property: "og:title", content: "Grun Terra Limited | Construction Company" },
+  {
+    property: "og:description",
+    content:
+      "Broad vision. Honest service. Great value. Grun Terra Limited delivers quality construction projects on time.",
+  },
+  { property: "og:image", content: "/images/home-bg-1.jpg" },
+  { name: "twitter:card", content: "summary_large_image" },
+];
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

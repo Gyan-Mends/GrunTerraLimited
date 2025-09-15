@@ -1,3 +1,8 @@
+export const meta = () => [
+    { title: "Grun Terra Limited | Broad Vision. Honest Service. Great Value." },
+    { name: "description", content: "Grun Terra Limited provides quality, on-time construction projects. Get a free quote today." }
+];
+
 const Home = () => {
     return(
         <div className="w-full">
