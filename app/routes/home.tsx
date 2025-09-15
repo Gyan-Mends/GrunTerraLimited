@@ -14,7 +14,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
                     <div className="text-white max-w-3xl">
-                        <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-tight drop-shadow-md text-white">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white">
                             Broad Vision
                             <br />
                             Honest Service
@@ -25,7 +25,7 @@ const Home = () => {
                             Our goal then and now is to provide quality on time projects
                         </p>
                         <div className="mt-10 flex flex-wrap gap-4">
-                            <a href="#quote" className="bg-[#0f6b3a] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">Get Free Quote →</a>
+                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">Get Free Quote →</a>
                             <a href="#contact" className="border border-white/80 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0f6b3a] transition">Get In Touch</a>
                         </div>
                     </div>
