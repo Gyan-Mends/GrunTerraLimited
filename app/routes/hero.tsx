@@ -44,7 +44,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                    src="/images/Group-333.svg"
+                    src="/images/Group-333-blue.svg"
                     alt=""
                     aria-hidden
                     style={{
@@ -71,21 +71,7 @@ const Hero = () => {
                         opacity: 0.35,
                     }}
                 />
-                <img
-                    src="/images/Group-79.svg"
-                    alt=""
-                    aria-hidden
-                    style={{
-                        position: "absolute",
-                        left: -120,
-                        bottom: -60,
-                        width: 360,
-                        height: "auto",
-                        opacity: 0.9,
-                        zIndex: 0,
-                        userSelect: "none",
-                    }}
-                />
+               
             </div>
 
             <div
@@ -113,9 +99,9 @@ const Hero = () => {
                                 textTransform: "uppercase",
                             }}
                         >
-                            Best Business
+                            Dennislaw New Look is Here!!!
                         </span>
-                        <span style={{ marginLeft: 8, color: "#6b7280", fontSize: 12 }}>Business</span>
+                       
                     </div>
 
                     <h1
@@ -234,6 +220,7 @@ const Hero = () => {
                                                 height: 240,
                                                 objectFit: "cover",
                                                 borderRadius: 16,
+                                               
                                             }}
                                         />
                                     )}
@@ -268,6 +255,8 @@ const Hero = () => {
                                 top: "50%",
                                 right: 8,
                                 transform: "translateY(-50%)",
+                                background: "rgba(0,0,0,0.4)",
+                                color: "#fff",
                                 border: "none",
                                 borderRadius: 9999,
                                 width: 32,
