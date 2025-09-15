@@ -72,10 +72,9 @@ export default function Navigation() {
                             className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
                         >
                             <img 
-                                src="https://websitedemos.net/construction-02/wp-content/uploads/sites/35/2020/06/construction-company-logo-light-text.png" 
-                                alt="Construction" 
-                                className="lg:w-52 lg:h-10 w-auto h-16"
-                                onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/logo.png'; }}
+                                src="/logo.png" 
+                                alt="Grun Terra Limited" 
+                                className="lg:w-52 lg:h-10 w-auto h-full"
                             />
                            
                         </Link>
@@ -89,8 +88,8 @@ export default function Navigation() {
                                         href={item.to}
                                         className={`font-medium transition-colors duration-200 relative group ${
                                             isActive(item.to) 
-                                                ? 'text-[#FCB339]' 
-                                                : 'text-white hover:text-orange-200'
+                                                ? 'text-[#f39c3c]' 
+                                                : 'text-white hover:text-[#f39c3c]'
                                         }`}
                                         onClick={(e) => handleNavigation(e, item.to, item.isExternal)}
                                     >
@@ -105,8 +104,8 @@ export default function Navigation() {
                                         to={item.to}
                                         className={`font-medium transition-colors duration-200 relative group ${
                                             isActive(item.to) 
-                                                ? 'text-[#FCB339]' 
-                                                : 'text-white hover:text-orange-200'
+                                                ? 'text-[#f39c3c]' 
+                                                : 'text-white hover:text-[#f39c3c]'
                                         }`}
                                     >
                                         {item.name}
@@ -120,9 +119,9 @@ export default function Navigation() {
 
                         {/* Social Icons */}
                         <div className="hidden lg:flex items-center gap-4 text-white">
-                            <a href="#" aria-label="Facebook" className="hover:text-orange-200 transition-colors"><Facebook className="w-5 h-5" /></a>
-                            <a href="#" aria-label="Twitter" className="hover:text-orange-200 transition-colors"><Twitter className="w-5 h-5" /></a>
-                            <a href="#" aria-label="Instagram" className="hover:text-orange-200 transition-colors">
+                            <a href="#" aria-label="Facebook" className="hover:text-[#f39c3c] transition-colors"><Facebook className="w-5 h-5" /></a>
+                            <a href="#" aria-label="Twitter" className="hover:text-[#f39c3c] transition-colors"><Twitter className="w-5 h-5" /></a>
+                            <a href="#" aria-label="Instagram" className="hover:text-[#f39c3c] transition-colors">
                                 {/* Using Users icon placeholder for Instagram if not imported */}
                                 <Users className="w-5 h-5" />
                             </a>
@@ -130,7 +129,7 @@ export default function Navigation() {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="lg:hidden p-2 rounded-md text-white hover:text-orange-200 hover:bg-teal-800/50 transition-colors duration-200"
+                            className="lg:hidden p-2 rounded-md text-white hover:text-[#f39c3c] hover:bg-orange-800/50 transition-colors duration-200"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle mobile menu"
                         >
@@ -145,7 +144,7 @@ export default function Navigation() {
 
                     {/* Mobile Navigation */}
                     {mobileMenuOpen && (
-                        <nav className="lg:hidden mt-4 pb-4 border-t border-teal-400 pt-4 animate-fade-in">
+                        <nav className="lg:hidden mt-4 pb-4 border-t border-orange-400 pt-4 animate-fade-in">
                             <div className="flex flex-col space-y-4">
                                 {mobileNavigation.map((item) => (
                                     item.to.startsWith('/#') ? (
@@ -154,8 +153,8 @@ export default function Navigation() {
                                             href={item.to}
                                             className={`font-medium transition-colors duration-200 py-2 ${
                                                 isActive(item.to) 
-                                                    ? 'text-[#FCB339]' 
-                                                    : 'text-black hover:text-orange-200'
+                                                    ? 'text-[#f39c3c]' 
+                                                    : 'text-black hover:text-orange-600'
                                             }`}
                                             onClick={(e) => handleNavigation(e, item.to, item.isExternal)}
                                         >
@@ -167,8 +166,8 @@ export default function Navigation() {
                                             to={item.to} 
                                             className={`font-medium transition-colors duration-200 py-2 ${
                                                 isActive(item.to) 
-                                                    ? 'text-[#FCB339]' 
-                                                    : 'text-black hover:text-orange-200'
+                                                    ? 'text-[#f39c3c]' 
+                                                    : 'text-black hover:text-orange-600'
                                             }`}
                                             onClick={() => setMobileMenuOpen(false)}
                                         >

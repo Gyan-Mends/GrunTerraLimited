@@ -16,11 +16,11 @@
   --font-heading: "Montserrat", "Montserrat Alternates", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
-  /* CARA Brand Colors */
-  --color-cara-orange: #FCB339;
-  --color-cara-teal: #00A5B8;
-  --color-cara-orange-rgb: 252 179 57;
-  --color-cara-teal-rgb: 0 165 184;
+  /* Brand Colors - Grun Terra */
+  --color-primary: #0f6b3a; /* deep green from logo */
+  --color-accent: #f39c3c; /* warm orange accent */
+  --color-primary-rgb: 15 107 58;
+  --color-accent-rgb: 243 156 60;
 }
 
 /* Smooth scrolling for the entire page */
@@ -120,34 +120,26 @@ html {
 }
 
 .cara-btn-primary {
-  @apply bg-[--color-cara-orange] bg-[#e8a332] text-white font-semibold py-3 px-8 rounded-xl 
+  @apply bg-[--color-primary] text-white font-semibold py-3 px-8 rounded-xl 
          transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-md;
 }
 
 .cara-btn-secondary {
-  @apply border-2 border-[--color-cara-teal] text-[--color-cara-teal] hover:bg-[--color-cara-teal] 
+  @apply border-2 border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] 
          hover:text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 
          transform hover:scale-105 hover:shadow-lg;
 }
 
-.cara-text-orange {
-  color: var(--color-cara-orange);
-}
+.cara-text-orange { color: var(--color-accent); }
 
-.cara-text-teal {
-  color: var(--color-cara-teal);
-}
+.cara-text-teal { color: var(--color-primary); }
 
-.cara-bg-orange {
-  background-color: var(--color-cara-orange);
-}
+.cara-bg-orange { background-color: var(--color-accent); }
 
-.cara-bg-teal {
-  background-color: var(--color-cara-teal);
-}
+.cara-bg-teal { background-color: var(--color-primary); }
 
 .cara-gradient-text {
-  background: linear-gradient(135deg, var(--color-cara-teal) 0%, var(--color-cara-orange) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
