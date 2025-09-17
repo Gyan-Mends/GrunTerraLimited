@@ -133,16 +133,34 @@ const Home = () => {
                     {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service) => (
-                            <div key={service.id} className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow duration-300">
-                                <div className="w-16 h-16 bg-[#f39c3c]/10 rounded-lg flex items-center justify-center mb-6">
-                                    <div className="w-8 h-8 bg-[#f39c3c] rounded"></div>
+                            <div key={service.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                                {/* Service Image */}
+                                <div className="relative h-48 overflow-hidden">
+                                    <img 
+                                        src={service.image} 
+                                        alt={service.alt}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                                    {service.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {service.description}
-                                </p>
+                                
+                                {/* Service Content */}
+                                <div className="p-6">
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-gray-600 leading-relaxed mb-4">
+                                        {service.description}
+                                    </p>
+                                    
+                                    {/* Call to Action */}
+                                    <div className="flex items-center text-[#f39c3c] font-medium group-hover:text-[#e8902f] transition-colors duration-300">
+                                        <span>Learn More</span>
+                                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

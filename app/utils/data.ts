@@ -3,39 +3,31 @@ export interface Service {
   id: number;
   title: string;
   description: string;
-  icon?: string;
+  image: string;
+  alt: string;
 }
 
 export const services: Service[] = [
   {
     id: 1,
     title: "Residential Construction",
-    description: "Custom home building and residential projects designed to meet your specific needs and lifestyle requirements."
+    description: "Custom home building and residential projects designed to meet your specific needs and lifestyle requirements.",
+    image: "/images/section_two_image.jpg",
+    alt: "Residential Construction"
   },
   {
     id: 2,
     title: "Commercial Projects",
-    description: "Office buildings, retail spaces, and commercial developments built with precision and professional expertise."
+    description: "Office buildings, retail spaces, and commercial developments built with precision and professional expertise.",
+    image: "/images/section_two_image.jpg",
+    alt: "Commercial Projects"
   },
   {
     id: 3,
     title: "Infrastructure Development",
-    description: "Roads, bridges, and infrastructure projects that form the backbone of communities and economic growth."
-  },
-  {
-    id: 4,
-    title: "Project Management",
-    description: "End-to-end project coordination ensuring timely delivery, budget compliance, and quality standards."
-  },
-  {
-    id: 5,
-    title: "Renovation & Remodeling",
-    description: "Transform existing spaces with modern upgrades, structural improvements, and aesthetic enhancements."
-  },
-  {
-    id: 6,
-    title: "Consulting Services",
-    description: "Expert advice on construction planning, feasibility studies, and technical consultations for your projects."
+    description: "Roads, bridges, and infrastructure projects that form the backbone of communities and economic growth.",
+    image: "/images/section_two_image.jpg",
+    alt: "Infrastructure Development"
   }
 ];
 
