@@ -64,7 +64,7 @@ export default function Navigation() {
     return (
         <header className="absolute top-0 left-0 right-0 pt-6 pb-6 z-[9999] transition-all duration-300 border-b border-white/40 ">
             <div className="">
-                <div className="bg-transparent transition-all duration-300">
+                <div className="bg-transparent lg:bg-transparent bg-white/95 backdrop-blur-sm transition-all duration-300">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between">
                         <Link 
@@ -129,7 +129,7 @@ export default function Navigation() {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="lg:hidden p-2 rounded-md text-white hover:text-[#f39c3c] hover:bg-orange-800/50 transition-colors duration-200"
+                            className="lg:hidden p-2 rounded-md text-gray-800 lg:text-white hover:text-[#f39c3c] hover:bg-orange-800/50 transition-colors duration-200"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle mobile menu"
                         >
@@ -144,7 +144,7 @@ export default function Navigation() {
 
                     {/* Mobile Navigation */}
                     {mobileMenuOpen && (
-                        <nav className="lg:hidden mt-4 pb-4 border-t border-orange-400 pt-4 animate-fade-in">
+                        <nav className="lg:hidden mt-4 pb-4 border-t border-orange-400 pt-4 animate-fade-in bg-white/95 backdrop-blur-sm">
                             <div className="flex flex-col space-y-4">
                                 {mobileNavigation.map((item) => (
                                     item.to.startsWith('/#') ? (

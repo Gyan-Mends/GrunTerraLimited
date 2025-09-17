@@ -1,27 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-
 const Hero = () => {
-    const slides = [
-        "/images/Macbook-Air-staging.dennislawgh.com.png",
-        "/images/Macbook-Air-staging.dennislawgh.com.png",
-        "/images/Macbook-Air-staging.dennislawgh.com.png",
-    ];
-    const [current, setCurrent] = useState(0);
-    const timerRef = useRef<number | null>(null);
-
-    useEffect(() => {
-        if (timerRef.current) window.clearInterval(timerRef.current);
-        timerRef.current = window.setInterval(() => {
-            setCurrent((c) => (c + 1) % slides.length);
-        }, 5000);
-        return () => {
-            if (timerRef.current) window.clearInterval(timerRef.current);
-        };
-    }, [slides.length]);
-
-    const goTo = (idx: number) => {
-        setCurrent((idx + slides.length) % slides.length);
-    };
     return (
         <section
             style={{
@@ -181,118 +158,59 @@ const Hero = () => {
                             borderRadius: 24,
                             overflow: "hidden",
                             zIndex: 1,
-                          
                             margin: "0 auto",
                         }}
                     >
-                        <div
-                            style={{
-                                display: "flex",
-                                width: "100%",
-                                height: "100%",
-                                transform: `translateX(-${current * 100}%)`,
-                                transition: "transform 500ms ease",
-                            }}
-                        >
-                            {slides.map((src, idx) => (
-                                <div key={idx} style={{ position: "relative", flex: "0 0 100%", height: "100%" }}>
-                                    <img
-                                        src={src}
-                                        alt="Dennislaw preview"
-                                        style={{
-                                            width: "100%",
-                                            height: "100%",
-                                            objectFit: "cover",
-                                            display: "block",
-                                            borderRadius: 24,
-                                        }}
-                                        loading={idx === 0 ? "eager" : "lazy"}
-                                    />
-                                    {src.includes("Macbook-Air") && (
-                                        <img
-                                            src="/images/mobile.png"
-                                            alt="Mobile preview"
-                                            style={{
-                                                position: "absolute",
-                                                right: 16,
-                                                bottom: 16,
-                                                width: 120,
-                                                height: 240,
-                                                objectFit: "cover",
-                                                borderRadius: 16,
-                                               
-                                            }}
-                                        />
-                                    )}
+                        <style>{`
+                            .dlx-carousel { position: relative; width: 100%; height: 100%; }
+                            .dlx-carousel input { display: none; }
+                            .dlx-track { display: flex; width: 100%; height: 100%; transition: transform 500ms ease; animation: dlxAuto 15s infinite; }
+                            @keyframes dlxAuto {
+                                0%, 25% { transform: translateX(0); }
+                                33%, 58% { transform: translateX(-100%); }
+                                66%, 91% { transform: translateX(-200%); }
+                                100% { transform: translateX(0); }
+                            }
+                            .dlx-carousel:hover .dlx-track { animation-play-state: paused; }
+                            #dlx-s1:checked ~ .dlx-track { transform: translateX(0); }
+                            #dlx-s2:checked ~ .dlx-track { transform: translateX(-100%); }
+                            #dlx-s3:checked ~ .dlx-track { transform: translateX(-200%); }
+                            .dlx-slide { position: relative; flex: 0 0 100%; height: 100%; }
+                            .dlx-slide img.base { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 24px; }
+                            .dlx-slide img.phone { position: absolute; right: 16px; bottom: 16px; width: 120px; height: 240px; object-fit: cover; border-radius: 16px; }
+                            .dlx-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+                            .dlx-dots label { width: 8px; height: 8px; border-radius: 9999px; background: #e5e7eb; cursor: pointer; }
+                            #dlx-s1:checked ~ .dlx-dots label[for="dlx-s1"],
+                            #dlx-s2:checked ~ .dlx-dots label[for="dlx-s2"],
+                            #dlx-s3:checked ~ .dlx-dots label[for="dlx-s3"] { background: #0ea5e9; }
+                            .dlx-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 9999px; background: rgba(0,0,0,0.4); color: #fff; display: grid; place-items: center; cursor: pointer; }
+                            .dlx-arrow.prev { left: 8px; }
+                            .dlx-arrow.next { right: 8px; }
+                        `}</style>
+                        <div className="dlx-carousel">
+                            <input type="radio" name="dlx" id="dlx-s1" defaultChecked />
+                            <input type="radio" name="dlx" id="dlx-s2" />
+                            <input type="radio" name="dlx" id="dlx-s3" />
+                            <div className="dlx-track">
+                                <div className="dlx-slide">
+                                    <img className="base" src="/images/subject.png" alt="Laptop preview" />
+                                    <img className="phone" src="/images/subject-mobile.png" alt="Mobile overlay" />
                                 </div>
-                            ))}
-                        </div>
-
-                        <button
-                            aria-label="Previous slide"
-                            onClick={() => goTo(current - 1)}
-                            style={{
-                                position: "absolute",
-                                top: "50%",
-                                left: 8,
-                                transform: "translateY(-50%)",
-                                background: "rgba(0,0,0,0.4)",
-                                color: "#fff",
-                                border: "none",
-                                borderRadius: 9999,
-                                width: 32,
-                                height: 32,
-                                cursor: "pointer",
-                            }}
-                        >
-                            ‹
-                        </button>
-                        <button
-                            aria-label="Next slide"
-                            onClick={() => goTo(current + 1)}
-                            style={{
-                                position: "absolute",
-                                top: "50%",
-                                right: 8,
-                                transform: "translateY(-50%)",
-                                background: "rgba(0,0,0,0.4)",
-                                color: "#fff",
-                                border: "none",
-                                borderRadius: 9999,
-                                width: 32,
-                                height: 32,
-                                cursor: "pointer",
-                            }}
-                        >
-                            ›
-                        </button>
-
-                        <div
-                            style={{
-                                position: "absolute",
-                                bottom: 10,
-                                left: "50%",
-                                transform: "translateX(-50%)",
-                                display: "flex",
-                                gap: 6,
-                            }}
-                        >
-                            {slides.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => goTo(i)}
-                                    aria-label={`Go to slide ${i + 1}`}
-                                    style={{
-                                        width: 8,
-                                        height: 8,
-                                        borderRadius: 9999,
-                                        border: "none",
-                                        background: i === current ? "#0ea5e9" : "#e5e7eb",
-                                        cursor: "pointer",
-                                        padding: 0,
-                                    }}
-                                />
-                            ))}
+                                <div className="dlx-slide">
+                                <img className="base" src="/images/lap.png" alt="Laptop preview" />
+                                <img className="phone" src="/images/lap-mobile.png" alt="Mobile overlay" />
+                                </div>
+                                <div className="dlx-slide">
+                                <img className="base" src="/images/subject.png" alt="Laptop preview" />
+                                <img className="phone" src="/images/subject-mobile.png" alt="Mobile overlay" />
+                                </div>
+                            </div>
+                            <div className="dlx-dots">
+                                <label htmlFor="dlx-s1" />
+                                <label htmlFor="dlx-s2" />
+                                <label htmlFor="dlx-s3" />
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
