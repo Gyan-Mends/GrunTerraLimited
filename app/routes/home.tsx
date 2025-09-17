@@ -1,4 +1,4 @@
-import { services, projects } from "~/utils/data";
+import { services, projects, testimonials } from "~/utils/data";
 
 export const meta = () => [
     { title: "Grun Terra Limited | Broad Vision. Honest Service. Great Value." },
@@ -47,8 +47,8 @@ const Home = () => {
                             Our goal then and now is to provide quality on time projects
                         </p>
                         <div className="mt-10 flex flex-wrap gap-4">
-                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">Get Free Quote →</a>
-                            <a href="#contact" className="border border-white/80 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0f6b3a] transition">Get In Touch</a>
+                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition">Get Free Quote →</a>
+                            <a href="#contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition">Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@ const Home = () => {
                     {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service) => (
-                            <div key={service.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                            <div key={service.id} className="bg-white  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
                                 {/* Service Image */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img 
@@ -169,7 +169,7 @@ const Home = () => {
                     <div className="text-center mt-16">
                         <a 
                             href="#contact" 
-                            className="inline-flex items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold rounded-lg hover:bg-[#e8902f] transition-colors duration-300"
+                            className="inline-flex items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold  hover:bg-[#e8902f] transition-colors duration-300"
                         >
                             Get Free Consultation
                             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,7 +195,7 @@ const Home = () => {
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
                             Explore our portfolio of completed construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence.
                         </p>
-                        <button className="bg-[#f39c3c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e8902f] transition-colors duration-300">
+                        <button className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300">
                             View All Projects
                         </button>
                     </div>
@@ -225,7 +225,116 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="contact" className="py-24 bg-gray-50">
+            
+            {/* Testimonials Section */}
+            <section className="py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        {/* Left Side - Header Content */}
+                        <div className="lg:pr-8">
+                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                What Our Clients Say
+                            </h2>
+                            <div className="w-16 h-1 bg-[#f39c3c] mb-6"></div>
+                            <p className="text-gray-600 leading-relaxed mb-8">
+                                You can use these sections to highlight the features of heading. Use these paragraphs to focus on the topic you want. Make sure you keep it short and attractive.
+                            </p>
+                            
+                            {/* First testimonial under description */}
+                            <div className="flex bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <div className="w-32  flex-shrink-0">
+                                    <img 
+                                        src={testimonials[0].image} 
+                                        alt={testimonials[0].alt}
+                                        className="w-full h-52 object-cover  grayscale"
+                                    />
+                                </div>
+                                <div className="flex-1 p-6 flex flex-col justify-between">
+                                    <div>
+                                        <svg className="w-6 h-6 text-[#f39c3c] mb-3" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        </svg>
+                                        <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                                            {testimonials[0].quote}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 text-sm mb-1">
+                                            {testimonials[0].name}
+                                        </h4>
+                                        <p className="text-xs text-[#f39c3c] font-medium">
+                                            {testimonials[0].position}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Side - Two Testimonials */}
+                        <div className="space-y-6">
+                            {/* Second testimonial - top right */}
+                            <div className="flex bg-white  shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <div className="w-40 h-52 flex-shrink-0">
+                                    <img 
+                                        src={testimonials[1].image} 
+                                        alt={testimonials[1].alt}
+                                        className="w-full h-full object-cover  grayscale"
+                                    />
+                                </div>
+                                <div className="flex-1 p-4 flex flex-col justify-between">
+                                    <div>
+                                        <svg className="w-5 h-5 text-[#f39c3c] mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        </svg>
+                                        <p className="text-gray-600 leading-relaxed mb-3 text-xs">
+                                            {testimonials[1].quote}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 text-xs mb-1">
+                                            {testimonials[1].name}
+                                        </h4>
+                                        <p className="text-xs text-[#f39c3c] font-medium">
+                                            {testimonials[1].position}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Third testimonial - bottom right */}
+                            <div className="flex bg-white  shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="w-40 h-52 flex-shrink-0">
+                            <img 
+                                        src={testimonials[2].image} 
+                                        alt={testimonials[2].alt}
+                                        className="w-full h-full object-cover  grayscale"
+                                    />
+                                </div>
+                                <div className="flex-1 p-4 flex flex-col justify-between">
+                                    <div>
+                                        <svg className="w-5 h-5 text-[#f39c3c] mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        </svg>
+                                        <p className="text-gray-600 leading-relaxed mb-3 text-xs">
+                                            {testimonials[2].quote}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 text-xs mb-1">
+                                            {testimonials[2].name}
+                                        </h4>
+                                        <p className="text-xs text-[#f39c3c] font-medium">
+                                            {testimonials[2].position}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contact" className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold">Contact Us</h2>
                     <p className="mt-4 text-gray-600">Content coming soon.</p>

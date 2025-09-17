@@ -75,3 +75,40 @@ export const projects: Project[] = [
     alt: "Skyscraper Tower"
   }
 ];
+
+// Testimonials Data
+export interface Testimonial {
+  id: number;
+  quote: string;
+  name: string;
+  position: string;
+  image: string;
+  alt: string;
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    name: "Margaret Curtis",
+    position: "Real Estate Developer",
+    image: "/images/section_two_image.jpg",
+    alt: "Margaret Curtis"
+  },
+  {
+    id: 2,
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    name: "Matthew Fox",
+    position: "Development Company",
+    image: "/images/section_two_image.jpg",
+    alt: "Matthew Fox"
+  },
+  {
+    id: 3,
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    name: "John Doe",
+    position: "Architect",
+    image: "/images/section_two_image.jpg",
+    alt: "John Doe"
+  }
+];
