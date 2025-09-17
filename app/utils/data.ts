@@ -112,3 +112,110 @@ export const testimonials: Testimonial[] = [
     alt: "John Doe"
   }
 ];
+
+// News Data
+export interface News {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  image: string;
+  alt: string;
+  category: string;
+}
+
+export const news: News[] = [
+  {
+    id: 1,
+    title: "New Construction Technology Revolutionizes Building Process",
+    excerpt: "Innovative construction methods and smart technology are transforming how we build modern structures, making projects faster and more efficient.",
+    date: "September 15, 2025",
+    image: "/images/section_two_image.jpg",
+    alt: "Construction Technology",
+    category: "Technology"
+  },
+  {
+    id: 2,
+    title: "Sustainable Building Practices for the Future",
+    excerpt: "Exploring eco-friendly construction materials and green building techniques that reduce environmental impact while maintaining quality.",
+    date: "September 10, 2025",
+    image: "/images/section_two_image.jpg",
+    alt: "Sustainable Building",
+    category: "Sustainability"
+  },
+  {
+    id: 3,
+    title: "Grun Terra Wins Major Infrastructure Project",
+    excerpt: "Our company has been selected to lead a landmark infrastructure development that will benefit the community for generations to come.",
+    date: "September 5, 2025",
+    image: "/images/section_two_image.jpg",
+    alt: "Infrastructure Project",
+    category: "Company News"
+  }
+];
+
+// Team Data
+export interface TeamMember {
+  id: number;
+  name: string;
+  position: string;
+  bio: string;
+  image: string;
+  alt: string;
+  social: {
+    linkedin?: string;
+    twitter?: string;
+    email?: string;
+  };
+}
+
+export const team: TeamMember[] = [
+  {
+    id: 1,
+    name: "John Smith",
+    position: "Chief Executive Officer",
+    bio: "With over 20 years of experience in construction management, John leads our team with vision and expertise.",
+    image: "/images/section_two_image.jpg",
+    alt: "John Smith - CEO",
+    social: {
+      linkedin: "#",
+      email: "john@grunterra.com"
+    }
+  },
+  {
+    id: 2,
+    name: "Sarah Johnson",
+    position: "Project Manager",
+    bio: "Sarah specializes in large-scale commercial projects and ensures every detail meets our high standards.",
+    image: "/images/section_two_image.jpg",
+    alt: "Sarah Johnson - Project Manager",
+    social: {
+      linkedin: "#",
+      email: "sarah@grunterra.com"
+    }
+  },
+  {
+    id: 3,
+    name: "Michael Brown",
+    position: "Lead Engineer",
+    bio: "Michael brings innovative engineering solutions to complex construction challenges with precision and creativity.",
+    image: "/images/section_two_image.jpg",
+    alt: "Michael Brown - Lead Engineer",
+    social: {
+      linkedin: "#",
+      email: "michael@grunterra.com"
+    }
+  },
+  {
+    id: 4,
+    name: "Emily Davis",
+    position: "Architecture Director",
+    bio: "Emily designs beautiful and functional spaces that exceed client expectations while maintaining structural integrity.",
+    image: "/images/section_two_image.jpg",
+    alt: "Emily Davis - Architecture Director",
+    social: {
+      linkedin: "#",
+      email: "emily@grunterra.com"
+    }
+  }
+];
