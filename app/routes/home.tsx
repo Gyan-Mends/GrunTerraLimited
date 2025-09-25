@@ -72,8 +72,8 @@ const Home = () => {
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
-                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded">Get Free Quote →</a>
-                            <a href="#contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded">Get In Touch</a>
+                            <a href="/contact/#contact" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded">Get Free Quote →</a>
+                            <a href="/contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded">Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -228,9 +228,7 @@ const Home = () => {
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
                             Explore our portfolio of completed construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence.
                         </p>
-                        <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
-                            View All Projects
-                        </button>
+                        
                     </div>
 
                     {/* Projects Grid */}
@@ -260,6 +258,12 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+
+                    <div className="flex items-center justify-center py-10">
+                    <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                            View All Projects
+                        </button>
                     </div>
                 </div>
             </section>
