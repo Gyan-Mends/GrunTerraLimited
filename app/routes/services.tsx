@@ -131,13 +131,13 @@ const Services = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             Our <span className="text-[#f39c3c]">Services</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Comprehensive construction solutions for residential, commercial, and infrastructure projects. Quality craftsmanship backed by decades of experience.
                         </p>
-                        <div className="mt-10">
+                        <div className="mt-10" data-aos="fade-up" data-aos-delay="600">
                             <a
                                 href="#services"
                                 className="bg-[#f39c3c] text-white px-8 py-3 font-semibold hover:bg-[#e8902f] transition-colors duration-300 rounded"
@@ -152,7 +152,7 @@ const Services = () => {
             {/* Main Services Section */}
             <section id="services" className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">What We Do</span>
@@ -252,7 +252,7 @@ const Services = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {additionalServices.map((service, index) => (
-                            <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className="w-12 h-12 bg-[#f39c3c] rounded-lg flex items-center justify-center mb-6">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon} />
@@ -335,14 +335,14 @@ const Services = () => {
 
             {/* CTA Section */}
             <section className="py-24 bg-gray-900">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
                     <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
                         Ready to Start Your Project?
                     </h2>
                     <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
                         Contact us today for a free consultation and see how we can bring your construction vision to life with professional expertise and quality craftsmanship.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
                         <a
                             href="/contact"
                             className="bg-[#f39c3c] text-white px-8 py-4 font-semibold rounded hover:bg-[#e8902f] transition-colors duration-300"

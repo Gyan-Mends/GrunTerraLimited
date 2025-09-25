@@ -142,10 +142,10 @@ const Team = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             Our <span className="text-[#f39c3c]">Team</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Meet the dedicated professionals who bring expertise, passion, and innovation to every construction project. Our team is the foundation of our success.
                         </p>
                     </div>
@@ -177,7 +177,7 @@ const Team = () => {
                             { number: "15", label: "Professional Certifications" },
                             { number: "5", label: "Specialized Departments" }
                         ].map((stat, index) => (
-                            <div key={index} className="text-center">
+                            <div key={index} className="text-center" data-aos="zoom-in" data-aos-delay={index * 100}>
                                 <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">
                                     {stat.number}
                                 </div>
@@ -203,8 +203,8 @@ const Team = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {extendedTeam.slice(0, 4).map((member) => (
-                            <div key={member.id} className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 group text-center rounded-xl overflow-hidden">
+                        {extendedTeam.slice(0, 4).map((member, index) => (
+                            <div key={member.id} className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 group text-center rounded-xl overflow-hidden" data-aos="zoom-in" data-aos-delay={index * 150}>
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={member.image}
@@ -366,7 +366,7 @@ const Team = () => {
 
             {/* Careers CTA */}
             <section className="py-24 bg-[#f39c3c]">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
                     <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
                         Join Our Team
                     </h2>

@@ -121,13 +121,13 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             Our <span className="text-[#f39c3c]">Projects</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Explore our portfolio of successful construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence across various sectors.
                         </p>
-                        <div className="mt-10">
+                        <div className="mt-10" data-aos="fade-up" data-aos-delay="600">
                             <a
                                 href="#portfolio"
                                 className="bg-[#f39c3c] text-white px-8 py-3 font-semibold hover:bg-[#e8902f] transition-colors duration-300 rounded"
@@ -368,7 +368,7 @@ const Projects = () => {
 
             {/* CTA Section */}
             <section className="py-24 bg-[#f39c3c]">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
                     <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
                         Ready to Start Your Next Project?
                     </h2>

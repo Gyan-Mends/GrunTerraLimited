@@ -1,4 +1,6 @@
 import { Outlet, Link } from "react-router";
+import { useEffect } from "react";
+import AOS from "aos";
 import Navigation from "../components/navigation";
 import { InstagramIcon, LinkedinIcon, TwitterIcon, XIcon, YoutubeIcon } from "lucide-react";
 import { FacebookIcon } from "lucide-react";
@@ -19,6 +21,19 @@ export const meta = () => [
 ];
 
 export default function AppLayout() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            offset: 50,
+        });
+
+        // Refresh AOS when route changes
+        AOS.refresh();
+    }, []);
 
     return (
         <div className="min-h-screen ">

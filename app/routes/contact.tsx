@@ -67,10 +67,10 @@ const Contact = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             Get In <span className="text-[#f39c3c]">Touch</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Ready to start your construction project? Contact us today for a free consultation and discover how we can bring your vision to life.
                         </p>
                     </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {contactMethods.map((method, index) => (
-                            <div key={index} className="text-center bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div key={index} className="text-center bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className={`w-16 h-16 ${method.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={method.icon} />
@@ -108,7 +108,7 @@ const Contact = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Contact Form */}
-                        <div>
+                        <div data-aos="fade-right">
                             <div className="mb-8">
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4 font-heading">
                                     Request a Free Quote
@@ -273,7 +273,7 @@ const Contact = () => {
                         </div>
 
                         {/* Contact Info */}
-                        <div className="lg:pl-8">
+                        <div className="lg:pl-8" data-aos="fade-left">
                             <div className="mb-12">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading">
                                     Why Choose Grun Terra?

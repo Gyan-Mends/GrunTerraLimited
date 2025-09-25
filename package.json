@@ -12,6 +12,7 @@
     "@heroui/react": "^2.8.0-beta.6",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
+    "aos": "^2.3.4",
     "isbot": "^5.1.27",
     "lucide-react": "^0.511.0",
     "nodemailer": "^6.9.8",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@react-router/dev": "^7.5.3",
     "@tailwindcss/vite": "^4.1.4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.14",
     "@types/react": "^19.1.2",

@@ -83,10 +83,10 @@ const News = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             News & <span className="text-[#f39c3c]">Updates</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Stay informed with the latest construction industry insights, project updates, and expert perspectives from our team of construction professionals.
                         </p>
                     </div>
@@ -184,8 +184,8 @@ const News = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {allArticles.map((article) => (
-                            <article key={article.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group rounded-xl overflow-hidden">
+                        {allArticles.map((article, index) => (
+                            <article key={article.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className="relative h-48 overflow-hidden">
                                     <img
                                         src={article.image}

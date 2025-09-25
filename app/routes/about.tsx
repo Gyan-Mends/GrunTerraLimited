@@ -29,10 +29,10 @@ const About = () => {
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             About <span className="text-[#f39c3c]">Grun Terra</span>
                         </h1>
-                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+                        <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Building excellence since 2003. We combine traditional craftsmanship with modern innovation to deliver exceptional construction projects.
                         </p>
                     </div>
@@ -44,7 +44,7 @@ const About = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
-                        <div className="space-y-8">
+                        <div className="space-y-8" data-aos="fade-right">
                             <div>
                                 <div className="flex items-center space-x-2 mb-4">
                                     <div className="w-8 h-1 bg-[#f39c3c]"></div>
@@ -71,11 +71,13 @@ const About = () => {
                         </div>
 
                         {/* Image */}
-                        <div className="relative">
+                        <div className="relative" data-aos="fade-left">
                             <img
                                 src="/images/contructor2.jpg"
                                 alt="Construction team at work"
                                 className="w-full h-[60vh] rounded-xl object-cover"
+                                data-aos="zoom-in"
+                                data-aos-delay="200"
                             />
                             <div className="absolute inset-0 border-b-4 border-r-4 border-[#f39c3c] transform translate-x-6 translate-y-6 z-10 rounded-xl"></div>
                         </div>
@@ -86,7 +88,7 @@ const About = () => {
             {/* Mission & Vision Section */}
             <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Values</span>
@@ -99,7 +101,7 @@ const About = () => {
 
                     <div className="grid md:grid-cols-2 gap-12">
                         {/* Mission */}
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
+                        <div className="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-right">
                             <div className="flex items-center mb-6">
                                 <div className="w-12 h-12 bg-[#f39c3c] rounded-lg flex items-center justify-center mr-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +116,7 @@ const About = () => {
                         </div>
 
                         {/* Vision */}
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
+                        <div className="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-left">
                             <div className="flex items-center mb-6">
                                 <div className="w-12 h-12 bg-[#f39c3c] rounded-lg flex items-center justify-center mr-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +137,7 @@ const About = () => {
             {/* Core Values Section */}
             <section className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Core Values
                         </h2>
@@ -177,7 +179,7 @@ const About = () => {
                                 description: "We're committed to environmentally responsible construction practices for a sustainable future."
                             }
                         ].map((value, index) => (
-                            <div key={index} className="text-center group">
+                            <div key={index} className="text-center group" data-aos="fade-up" data-aos-delay={index * 100}>
                                 <div className="w-16 h-16 bg-[#f39c3c] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#e8902f] transition-colors duration-300">
                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
@@ -198,7 +200,7 @@ const About = () => {
             {/* Statistics Section */}
             <section className="py-24 bg-gray-900 text-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading">
                             Our Achievements
                         </h2>
@@ -214,7 +216,7 @@ const About = () => {
                             { number: "98%", label: "Client Satisfaction" },
                             { number: "50+", label: "Expert Team Members" }
                         ].map((stat, index) => (
-                            <div key={index} className="text-center">
+                            <div key={index} className="text-center" data-aos="zoom-in" data-aos-delay={index * 100}>
                                 <div className="text-4xl lg:text-5xl font-bold text-[#f39c3c] mb-3">
                                     {stat.number}
                                 </div>
@@ -230,7 +232,7 @@ const About = () => {
             {/* Team Section */}
             <section className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Team</span>
@@ -245,8 +247,8 @@ const About = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {team.map((member) => (
-                            <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center rounded-xl overflow-hidden">
+                        {team.map((member, index) => (
+                            <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center rounded-xl overflow-hidden" data-aos="zoom-in" data-aos-delay={index * 150}>
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={member.image}
@@ -293,14 +295,14 @@ const About = () => {
 
             {/* CTA Section */}
             <section className="py-24 bg-[#f39c3c]">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
                     <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
                         Ready to Work With Us?
                     </h2>
                     <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                         Let's discuss your construction project and see how we can bring your vision to life with our expertise and commitment to excellence.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
                         <a
                             href="/contact"
                             className="bg-white text-[#f39c3c] px-8 py-3 font-semibold rounded hover:bg-gray-100 transition-colors duration-300"

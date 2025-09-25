@@ -49,17 +49,29 @@ const Home = () => {
                 <div className="absolute inset-0 bg-black/60 "></div>
                 <div className="relative  max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
                     <div className=" max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white ">
+                        <h1
+                            className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white "
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             Broad Vision
                             <br />
                             <span className=" text-[#f39c3c]">Honest Service</span>
                             <br />
                             Great Value
                         </h1>
-                        <p className="mt-6 text-lg text-white/90 max-w-2xl">
+                        <p
+                            className="mt-6 text-lg text-white/90 max-w-2xl"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                        >
                             Our goal then and now is to provide quality on time projects
                         </p>
-                        <div className="mt-10 flex flex-wrap gap-4">
+                        <div
+                            className="mt-10 flex flex-wrap gap-4"
+                            data-aos="fade-up"
+                            data-aos-delay="600"
+                        >
                             <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded">Get Free Quote →</a>
                             <a href="#contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded">Get In Touch</a>
                         </div>
@@ -72,52 +84,54 @@ const Home = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
-                        <div className="space-y-8">
+                        <div className="space-y-8" data-aos="fade-right">
                             <div>
-                                <div className="flex items-center space-x-2 mb-4">
+                                <div className="flex items-center space-x-2 mb-4" data-aos="fade-up">
                                     <div className="w-8 h-1 bg-[#f39c3c]"></div>
                                     <span className="text-sm font-medium text-gray-600">ABOUT GRUN TERRA</span>
                                 </div>
-                                <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-900 leading-tight">
+                                <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-900 leading-tight" data-aos="fade-up" data-aos-delay="100">
                                     We Are The Leader In construction
                                 </h2>
                             </div>
-                            
-                            <p className="text-gray-600 leading-relaxed">
+
+                            <p className="text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                                 With over two decades of experience in the construction industry, Grun Terra Limited has established itself as a trusted partner for residential, commercial, and infrastructure development projects. We combine traditional craftsmanship with modern technology to deliver exceptional results.
                             </p>
 
                             {/* Quote Block */}
-                            <div className="bg-gray-50 border-l-4 border-[#f39c3c] pl-6 py-4">
+                            <div className="bg-gray-50 border-l-4 border-[#f39c3c] pl-6 py-4" data-aos="fade-up" data-aos-delay="300">
                                 <p className="text-gray-700 italic">
                                     "Our commitment to quality, safety, and client satisfaction has made us the preferred choice for construction projects across the region. We don't just build structures; we build lasting relationships and communities."
                                 </p>
                                 <span className="text-sm text-gray-500 mt-2 block">— Leadership Team, Grun Terra Limited</span>
                             </div>
-                            
+
                             {/* Statistics */}
-                            <div className="grid grid-cols-3 gap-8 pt-8">
-                                <div className="text-center">
+                            <div className="grid grid-cols-3 gap-8 pt-8" data-aos="fade-up" data-aos-delay="400">
+                                <div className="text-center" data-aos="zoom-in" data-aos-delay="500">
                                     <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">500+</div>
                                     <div className="text-sm text-gray-600 font-medium">Projects Completed</div>
                                 </div>
-                                <div className="text-center">
+                                <div className="text-center" data-aos="zoom-in" data-aos-delay="600">
                                     <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">20+</div>
                                     <div className="text-sm text-gray-600 font-medium">Years Experience</div>
                                 </div>
-                                <div className="text-center">
+                                <div className="text-center" data-aos="zoom-in" data-aos-delay="700">
                                     <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">98%</div>
                                     <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         {/* Image */}
-                        <div className="relative">
-                            <img 
-                                src="/images/contructor2.jpg" 
-                                alt="Modern building architecture" 
+                        <div className="relative" data-aos="fade-left">
+                            <img
+                                src="/images/contructor2.jpg"
+                                alt="Modern building architecture"
                                 className="w-full h-[60vh] rounded-xl"
+                                data-aos="zoom-in"
+                                data-aos-delay="200"
                             />
                             {/* Orange border frame behind image - bottom and right only */}
                             <div className="absolute inset-0 border-b-4 border-r-4 border-[#f39c3c] transform translate-x-6 translate-y-6 z-10 rounded-xl"></div>
@@ -130,7 +144,7 @@ const Home = () => {
             <section id="services" className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Services</span>
@@ -146,18 +160,23 @@ const Home = () => {
 
                     {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service) => (
-                            <div key={service.id} className="  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                        {services.map((service, index) => (
+                            <div
+                                key={service.id}
+                                className="overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
                                 {/* Service Image */}
                                 <div className="relative h-48 rounded-tr-lg rounded-tl-lg overflow-hidden">
-                                    <img 
-                                        src={service.image} 
+                                    <img
+                                        src={service.image}
                                         alt={service.alt}
                                         className="w-full h-full rounded-tr-lg rounded-tl-lg object-cover group-hover:scale-110 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                                 </div>
-                                
+
                                 {/* Service Content */}
                                 <div className="p-6">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -166,7 +185,7 @@ const Home = () => {
                                     <p className="text-gray-600 leading-relaxed mb-4">
                                         {service.description}
                                     </p>
-                                    
+
                                     {/* Call to Action */}
                                     <div className="flex items-center text-[#f39c3c] font-medium group-hover:text-[#e8902f] transition-colors duration-300">
                                         <span>Learn More</span>
@@ -180,9 +199,9 @@ const Home = () => {
                     </div>
 
                     {/* Call to Action */}
-                    <div className="text-center mt-16">
-                        <a 
-                            href="#contact" 
+                    <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
+                        <a
+                            href="#contact"
                             className="inline-flex rounded items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold  hover:bg-[#e8902f] transition-colors duration-300 "
                         >
                             Get Free Consultation
@@ -197,7 +216,7 @@ const Home = () => {
             <section id="projects" className="py-24 bg-white">
                 <div className="w-full">
                     {/* Section Header */}
-                    <div className="text-center mb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Recent Projects</span>
@@ -209,19 +228,24 @@ const Home = () => {
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
                             Explore our portfolio of completed construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence.
                         </p>
-                        <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300">
+                        <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
                             View All Projects
                         </button>
                     </div>
 
                     {/* Projects Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4   ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4">
                         {projects.map((project, index) => (
-                            <div key={project.id} className={`relative group overflow-hidden  ${getProjectClasses(project.size, index)}`}>
+                            <div
+                                key={project.id}
+                                className={`relative group overflow-hidden  ${getProjectClasses(project.size, index)}`}
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 150}
+                            >
                                 <div className={`${getProjectAspectRatio(project.size)} relative`}>
-                                    <img 
-                                        src={project.image} 
-                                        alt={project.alt} 
+                                    <img
+                                        src={project.image}
+                                        alt={project.alt}
                                         className="w-full h-full object-cover"
                                     />
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-colors duration-300"></div>
@@ -245,7 +269,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Left Side - Header Content */}
-                        <div className="lg:pr-8">
+                        <div className="lg:pr-8" data-aos="fade-right">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                                 What Our Clients Say
                             </h2>
@@ -253,12 +277,12 @@ const Home = () => {
                             <p className="text-gray-600 leading-relaxed mb-8">
                                 Don't just take our word for it. Hear from our satisfied clients who have experienced our commitment to quality construction, timely delivery, and exceptional service across residential and commercial projects.
                             </p>
-                            
+
                             {/* First testimonial under description */}
-                            <div className="flex bg-white shadow-sm hover:shadow-md rounded-lg transition-shadow duration-300">
+                            <div className="flex bg-white shadow-sm hover:shadow-md rounded-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
                                 <div className="w-32  flex-shrink-0">
-                                    <img 
-                                        src={testimonials[0].image} 
+                                    <img
+                                        src={testimonials[0].image}
                                         alt={testimonials[0].alt}
                                         className="w-full h-52 rounded-tl-lg rounded-bl-lg object-cover  grayscale"
                                     />
@@ -285,12 +309,12 @@ const Home = () => {
                         </div>
 
                         {/* Right Side - Two Testimonials */}
-                        <div className="space-y-6">
+                        <div className="space-y-6" data-aos="fade-left">
                             {/* Second testimonial - top right */}
-                            <div className="flex bg-white rounded-lg  shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="flex bg-white rounded-lg  shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
                                 <div className="w-40 h-52 flex-shrink-0">
-                                    <img 
-                                        src={testimonials[1].image} 
+                                    <img
+                                        src={testimonials[1].image}
                                         alt={testimonials[1].alt}
                                         className="w-full h-full object-cover rounded-tl-lg rounded-bl-lg  grayscale"
                                     />
@@ -316,10 +340,10 @@ const Home = () => {
                             </div>
 
                             {/* Third testimonial - bottom right */}
-                            <div className="flex bg-white  shadow-sm rounded-lg hover:shadow-md transition-shadow duration-300">
+                            <div className="flex bg-white  shadow-sm rounded-lg hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
                             <div className="w-40 h-52 flex-shrink-0">
-                            <img 
-                                        src={testimonials[2].image} 
+                            <img
+                                        src={testimonials[2].image}
                                         alt={testimonials[2].alt}
                                         className="w-full h-full rounded-tl-lg rounded-bl-lg object-cover  grayscale"
                                     />
@@ -352,7 +376,7 @@ const Home = () => {
             <section className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Latest News</span>
@@ -368,8 +392,8 @@ const Home = () => {
 
                     {/* News Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {news.map((article) => (
-                            <article key={article.id} className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        {news.map((article, index) => (
+                            <article key={article.id} className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300 group" data-aos="fade-up" data-aos-delay={index * 100}>
                                 {/* News Image */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img 
@@ -419,7 +443,7 @@ const Home = () => {
             <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Team</span>
@@ -435,8 +459,8 @@ const Home = () => {
 
                     {/* Team Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {team.map((member) => (
-                            <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center">
+                        {team.map((member, index) => (
+                            <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center" data-aos="zoom-in" data-aos-delay={index * 150}>
                                 {/* Team Member Image */}
                                 <div className="relative overflow-hidden">
                                     <img 
@@ -489,7 +513,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-3 items-center ">
                         {/* Left Side - CTA Content */}
-                        <div className="lg:pr-8 span-col-1">
+                        <div className="lg:pr-8 span-col-1" data-aos="fade-right">
                             <h2 className="text-3xl lg:text-4xl font-bold font-heading text-gray-900 leading-tight mb-8">
                                 Ready To Start Your{' '}
                                 <span className="text-[#f39c3c]">Construction Project?</span>
@@ -510,13 +534,15 @@ const Home = () => {
                         </div>
 
                         {/* Right Side - Construction Image */}
-                        <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-1/2">
-                            
+                        <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-1/2" data-aos="fade-left">
+
                             <div className="relative z-10 flex items-center justify-end h-full">
-                                <img 
-                                    src="/images/cta.png" 
-                                    alt="Construction crane and building site" 
+                                <img
+                                    src="/images/cta.png"
+                                    alt="Construction crane and building site"
                                     className="!h-[120vh] w-[150vw] object-contain mix-blend-multiply"
+                                    data-aos="zoom-in"
+                                    data-aos-delay="200"
                                    
                                 />
                             </div>

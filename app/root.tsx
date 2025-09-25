@@ -41,6 +41,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  {
+    rel: "stylesheet",
+    href: "https://unpkg.com/aos@2.3.4/dist/aos.css",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
