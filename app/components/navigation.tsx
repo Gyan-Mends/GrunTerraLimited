@@ -4,18 +4,22 @@ import { Link, useLocation } from "react-router";
 
 const navigation = [
     { name: "Home", to: "/", isExternal: false },
-    { name: "About", to: "/#about", isExternal: false },
-    { name: "Services", to: "/#services", isExternal: false },
-    { name: "Projects", to: "/#projects", isExternal: false },
-    { name: "Contact Us", to: "/#contact", isExternal: false },
+    { name: "About", to: "/about", isExternal: false },
+    { name: "Services", to: "/services", isExternal: false },
+    { name: "Projects", to: "/projects", isExternal: false },
+    { name: "News", to: "/news", isExternal: false },
+    { name: "Team", to: "/team", isExternal: false },
+    { name: "Contact", to: "/contact", isExternal: false },
 ];
 
 const mobileNavigation = [
     { name: "Home", to: "/", isExternal: false },
-    { name: "About", to: "/#about", isExternal: false },
-    { name: "Services", to: "/#services", isExternal: false },
-    { name: "Projects", to: "/#projects", isExternal: false },
-    { name: "Contact Us", to: "/#contact", isExternal: false },
+    { name: "About", to: "/about", isExternal: false },
+    { name: "Services", to: "/services", isExternal: false },
+    { name: "Projects", to: "/projects", isExternal: false },
+    { name: "News", to: "/news", isExternal: false },
+    { name: "Team", to: "/team", isExternal: false },
+    { name: "Contact", to: "/contact", isExternal: false },
 ];
 
 export default function Navigation() {
@@ -26,39 +30,7 @@ export default function Navigation() {
         if (href === "/") {
             return location.pathname === "/";
         }
-        if (href.startsWith("/#")) {
-            return location.pathname === "/" && location.hash === href.substring(1);
-        }
         return location.pathname === href;
-    };
-
-    const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal: boolean) => {
-        if (isExternal) {
-            setMobileMenuOpen(false);
-            return;
-        }
-        
-        setMobileMenuOpen(false);
-        
-        // Handle hash links (sections on home page)
-        if (href.startsWith('/#')) {
-            e.preventDefault();
-            // If we're on the home page, scroll to section
-            if (location.pathname === '/') {
-                const targetId = href.replace('/#', '');
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                    });
-                }
-            } else {
-                // If we're on another page, navigate to home page with hash
-                window.location.href = href;
-            }
-        }
-        // For regular routes, let React Router handle navigation
     };
 
     return (
@@ -82,38 +54,20 @@ export default function Navigation() {
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8">
                             {navigation.map((item) => (
-                                item.to.startsWith('/#') ? (
-                                    <a
-                                        key={item.name}
-                                        href={item.to}
-                                        className={`font-medium transition-colors duration-200 relative group ${
-                                            isActive(item.to) 
-                                                ? 'text-[#f39c3c]' 
-                                                : 'text-white hover:text-[#f39c3c]'
-                                        }`}
-                                        onClick={(e) => handleNavigation(e, item.to, item.isExternal)}
-                                    >
-                                        {item.name}
-                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${
-                                            isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'
-                                        }`}></span>
-                                    </a>
-                                ) : (
-                                    <Link
-                                        key={item.name}
-                                        to={item.to}
-                                        className={`font-medium transition-colors duration-200 relative group ${
-                                            isActive(item.to) 
-                                                ? 'text-[#f39c3c]' 
-                                                : 'text-white hover:text-[#f39c3c]'
-                                        }`}
-                                    >
-                                        {item.name}
-                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${
-                                            isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'
-                                        }`}></span>
-                                    </Link>
-                                )
+                                <Link
+                                    key={item.name}
+                                    to={item.to}
+                                    className={`font-medium transition-colors duration-200 relative group ${
+                                        isActive(item.to)
+                                            ? 'text-[#f39c3c]'
+                                            : 'text-white hover:text-[#f39c3c]'
+                                    }`}
+                                >
+                                    {item.name}
+                                    <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${
+                                        isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'
+                                    }`}></span>
+                                </Link>
                             ))}
                         </nav>
 
@@ -147,33 +101,18 @@ export default function Navigation() {
                         <nav className="lg:hidden mt-4 pb-4 border-t border-orange-400 pt-4 animate-fade-in bg-white/95 backdrop-blur-sm">
                             <div className="flex flex-col space-y-4">
                                 {mobileNavigation.map((item) => (
-                                    item.to.startsWith('/#') ? (
-                                        <a
-                                            key={item.name}
-                                            href={item.to}
-                                            className={`font-medium transition-colors duration-200 py-2 ${
-                                                isActive(item.to) 
-                                                    ? 'text-[#f39c3c]' 
-                                                    : 'text-black hover:text-orange-600'
-                                            }`}
-                                            onClick={(e) => handleNavigation(e, item.to, item.isExternal)}
-                                        >
-                                            {item.name}
-                                        </a>
-                                    ) : (
-                                        <Link 
-                                            key={item.name}
-                                            to={item.to} 
-                                            className={`font-medium transition-colors duration-200 py-2 ${
-                                                isActive(item.to) 
-                                                    ? 'text-[#f39c3c]' 
-                                                    : 'text-black hover:text-orange-600'
-                                            }`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    )
+                                    <Link
+                                        key={item.name}
+                                        to={item.to}
+                                        className={`font-medium transition-colors duration-200 py-2 ${
+                                            isActive(item.to)
+                                                ? 'text-[#f39c3c]'
+                                                : 'text-black hover:text-orange-600'
+                                        }`}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {item.name}
+                                    </Link>
                                 ))}
                             </div>
                         </nav>
