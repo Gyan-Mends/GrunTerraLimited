@@ -3,6 +3,21 @@ import Navigation from "../components/navigation";
 import { InstagramIcon, LinkedinIcon, TwitterIcon, XIcon, YoutubeIcon } from "lucide-react";
 import { FacebookIcon } from "lucide-react";
 
+export const meta = () => [
+    { title: "Grun Terra Limited | Premier Construction & Building Services" },
+    { name: "description", content: "Leading construction company providing residential, commercial, and infrastructure development services. Quality craftsmanship, reliable project delivery, and competitive pricing." },
+    { name: "keywords", content: "construction company, building contractors, residential construction, commercial construction, infrastructure development, construction services, building projects, renovation, remodeling" },
+    { property: "og:title", content: "Grun Terra Limited | Premier Construction & Building Services" },
+    { property: "og:description", content: "Professional construction services with broad vision, honest service, and great value. Transform your building dreams into reality." },
+    { property: "og:type", content: "website" },
+    { property: "og:site_name", content: "Grun Terra Limited" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Grun Terra Limited | Premier Construction Services" },
+    { name: "twitter:description", content: "Quality construction services with broad vision, honest service, and great value." },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "Grun Terra Limited" }
+];
+
 export default function AppLayout() {
 
     return (

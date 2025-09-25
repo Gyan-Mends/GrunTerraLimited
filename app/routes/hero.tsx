@@ -1,218 +1,97 @@
+export const meta = () => [
+    { title: "Construction Services | Grun Terra Limited | Professional Building Solutions" },
+    { name: "description", content: "Professional construction services including residential, commercial, and infrastructure development. Quality craftsmanship, on-time delivery, and competitive pricing." },
+    { name: "keywords", content: "construction services, building contractors, residential construction, commercial construction, infrastructure development, project management, renovation services" },
+    { property: "og:title", content: "Professional Construction Services | Grun Terra Limited" },
+    { property: "og:description", content: "Transform your vision into reality with our expert construction services. Quality, reliability, and excellence in every project." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Professional Construction Services | Grun Terra Limited" },
+    { name: "twitter:description", content: "Quality construction services with broad vision, honest service, and great value." }
+];
+
 const Hero = () => {
     return (
         <section
+            className="relative min-h-screen flex items-center justify-center bg-gray-900"
             style={{
-                background: "#ffffff",
-                color: "#0b1220",
-                padding: "48px 16px 0 16px",
-                position: "relative",
-                overflow: "hidden",
-                minHeight: "100vh",
-                boxSizing: "border-box",
-                display: "flex",
-                alignItems: "center",
+                backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('/images/construction-hero.jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed'
             }}
         >
-            <div
-                style={{
-                    position: "absolute",
-                    inset: 0,
-                    pointerEvents: "none",
-                }}
-            >
-                <img
-                    src="/images/Group-333-blue.svg"
-                    alt=""
-                    aria-hidden
-                    style={{
-                        position: "absolute",
-                        right: "-10vw",
-                        top: "-18vh",
-                        width: "min(1200px, 95vw)",
-                        height: "auto",
-                        opacity: 0.9,
-                        zIndex: 0,
-                        userSelect: "none",
-                    }}
-                />
-                <div
-                    style={{
-                        position: "absolute",
-                        left: -180,
-                        bottom: -120,
-                        width: 360,
-                        height: 360,
-                        background: "linear-gradient(145deg,#5b72f2,#0ea5e9)",
-                        borderRadius: 360,
-                        filter: "blur(18px)",
-                        opacity: 0.35,
-                    }}
-                />
-               
-            </div>
-
-            <div
-                style={{
-                    maxWidth: 1200,
-                    margin: "0 auto",
-                    display: "grid",
-                    gridTemplateColumns: "1.1fr 0.9fr",
-                    gap: 48,
-                    alignItems: "center",
-                    padding: "0 16px",
-                }}
-            >
-                <div style={{ padding: "24px 0 64px 0" }}>
-                    <div style={{ marginBottom: 16 }}>
-                        <span
-                            style={{
-                                display: "inline-block",
-                                padding: "6px 12px",
-                                borderRadius: 9999,
-                                background: "#0b1220",
-                                color: "#ffffff",
-                                fontSize: 12,
-                                letterSpacing: 0.4,
-                                textTransform: "uppercase",
-                            }}
-                        >
-                            Dennislaw New Look is Here!!!
-                        </span>
-                       
-                    </div>
-
-                    <h1
-                        style={{
-                            fontSize: 48,
-                            lineHeight: 1.15,
-                            margin: 0,
-                            fontWeight: 800,
-                            letterSpacing: -0.5,
-                        }}
-                    >
-                        We’re Equally Excited About Dennislaw v4
-                    </h1>
-                    <p
-                        style={{
-                            margin: "16px 0 0 0",
-                            color: "#4b5563",
-                            fontSize: 18,
-                            maxWidth: 640,
-                        }}
-                    >
-                        Our mission is to deliver faster legal search, deep case analysis, and a
-                        refined workspace for professionals. Explore the new experience today.
-                    </p>
-
-                    <div style={{ display: "flex", gap: 12, marginTop: 24, flexWrap: "wrap" }}>
-                        <a
-                            href="https://app.dennislawgh.com"
-                            style={{
-                                display: "inline-block",
-                                padding: "12px 18px",
-                                background: "#0ea5e9",
-                                color: "#ffffff",
-                                borderRadius: 8,
-                                textDecoration: "none",
-                                fontWeight: 600,
-                            }}
-                        >
-                            Try Dennislaw v4
-                        </a>
-                        <a
-                            href="https://dennislawgh.com/"
-                            style={{
-                                display: "inline-block",
-                                padding: "12px 18px",
-                                background: "transparent",
-                                color: "#0b1220",
-                                borderRadius: 8,
-                                textDecoration: "none",
-                                border: "1px solid #d1d5db",
-                                fontWeight: 500,
-                            }}
-                        >
-                            Continue on v3
-                        </a>
-                    </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="mb-8">
+                    <span className="inline-block bg-[#f39c3c] text-white px-6 py-3 rounded-full text-sm font-semibold tracking-wide uppercase">
+                        Premium Construction Services
+                    </span>
                 </div>
 
-                <div 
-                style={{
-                    position: "relative",
-                    padding: 16,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "100%",
-                    alignSelf: "stretch",
-                    justifySelf: "center",
-                    zIndex: 1,
-                }}
-                >
-                    <div
-                        style={{
-                            position: "relative",
-                            width: "min(700px, 95vw)",
-                            height: 400,
-                            borderRadius: 24,
-                            overflow: "hidden",
-                            zIndex: 1,
-                            margin: "0 auto",
-                        }}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Building Your
+                    <br />
+                    <span className="text-[#f39c3c]">Future Today</span>
+                </h1>
+
+                <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    From residential homes to commercial complexes, we deliver exceptional construction
+                    services with unmatched quality, reliability, and craftsmanship. Your vision, our expertise.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a
+                        href="#quote"
+                        className="bg-[#f39c3c] hover:bg-[#e8902f] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
-                        <style>{`
-                            .dlx-carousel { position: relative; width: 100%; height: 100%; }
-                            .dlx-carousel input { display: none; }
-                            .dlx-track { display: flex; width: 100%; height: 100%; transition: transform 500ms ease; animation: dlxAuto 15s infinite; }
-                            @keyframes dlxAuto {
-                                0%, 25% { transform: translateX(0); }
-                                33%, 58% { transform: translateX(-100%); }
-                                66%, 91% { transform: translateX(-200%); }
-                                100% { transform: translateX(0); }
-                            }
-                            .dlx-carousel:hover .dlx-track { animation-play-state: paused; }
-                            #dlx-s1:checked ~ .dlx-track { transform: translateX(0); }
-                            #dlx-s2:checked ~ .dlx-track { transform: translateX(-100%); }
-                            #dlx-s3:checked ~ .dlx-track { transform: translateX(-200%); }
-                            .dlx-slide { position: relative; flex: 0 0 100%; height: 100%; }
-                            .dlx-slide img.base { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 24px; }
-                            .dlx-slide img.phone { position: absolute; right: 16px; bottom: 16px; width: 120px; height: 240px; object-fit: cover; border-radius: 16px; }
-                            .dlx-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
-                            .dlx-dots label { width: 8px; height: 8px; border-radius: 9999px; background: #e5e7eb; cursor: pointer; }
-                            #dlx-s1:checked ~ .dlx-dots label[for="dlx-s1"],
-                            #dlx-s2:checked ~ .dlx-dots label[for="dlx-s2"],
-                            #dlx-s3:checked ~ .dlx-dots label[for="dlx-s3"] { background: #0ea5e9; }
-                            .dlx-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 9999px; background: rgba(0,0,0,0.4); color: #fff; display: grid; place-items: center; cursor: pointer; }
-                            .dlx-arrow.prev { left: 8px; }
-                            .dlx-arrow.next { right: 8px; }
-                        `}</style>
-                        <div className="dlx-carousel">
-                            <input type="radio" name="dlx" id="dlx-s1" defaultChecked />
-                            <input type="radio" name="dlx" id="dlx-s2" />
-                            <input type="radio" name="dlx" id="dlx-s3" />
-                            <div className="dlx-track">
-                                <div className="dlx-slide">
-                                    <img className="base" src="/images/subject.png" alt="Laptop preview" />
-                                    <img className="phone" src="/images/subject-mobile.png" alt="Mobile overlay" />
-                                </div>
-                                <div className="dlx-slide">
-                                <img className="base" src="/images/lap.png" alt="Laptop preview" />
-                                <img className="phone" src="/images/lap-mobile.png" alt="Mobile overlay" />
-                                </div>
-                                <div className="dlx-slide">
-                                <img className="base" src="/images/subject.png" alt="Laptop preview" />
-                                <img className="phone" src="/images/subject-mobile.png" alt="Mobile overlay" />
-                                </div>
-                            </div>
-                            <div className="dlx-dots">
-                                <label htmlFor="dlx-s1" />
-                                <label htmlFor="dlx-s2" />
-                                <label htmlFor="dlx-s3" />
-                            </div>
-                            
+                        Get Free Quote →
+                    </a>
+                    <a
+                        href="#projects"
+                        className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                    >
+                        View Our Work
+                    </a>
+                </div>
+
+                {/* Key Features */}
+                <div className="mt-20 grid md:grid-cols-3 gap-8">
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-[#f39c3c] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
                         </div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Quality Construction</h3>
+                        <p className="text-gray-300">Premium materials and skilled craftsmanship in every project</p>
                     </div>
+
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-[#f39c3c] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-2">On-Time Delivery</h3>
+                        <p className="text-gray-300">Reliable project completion within agreed timeframes</p>
+                    </div>
+
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-[#f39c3c] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Great Value</h3>
+                        <p className="text-gray-300">Competitive pricing without compromising on quality</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
+                    <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
                 </div>
             </div>
         </section>

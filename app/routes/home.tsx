@@ -1,8 +1,21 @@
 import { services, projects, testimonials, news, team } from "~/utils/data";
 
 export const meta = () => [
-    { title: "Grun Terra Limited | Broad Vision. Honest Service. Great Value." },
-    { name: "description", content: "Grun Terra Limited provides quality, on-time construction projects. Get a free quote today." }
+    { title: "Home | Grun Terra Limited | Professional Construction Services & Building Contractors" },
+    { name: "description", content: "Expert construction services for residential, commercial & infrastructure projects. Quality craftsmanship, on-time delivery, competitive pricing. Get your free construction quote today!" },
+    { name: "keywords", content: "construction services, building contractors, residential construction, commercial construction, home builders, construction company, infrastructure development, renovation services, construction projects, building services" },
+    { property: "og:title", content: "Professional Construction Services | Grun Terra Limited" },
+    { property: "og:description", content: "Transform your vision into reality with our expert construction services. Quality, reliability, and excellence in residential, commercial, and infrastructure projects." },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://grunterra.com" },
+    { property: "og:image", content: "/images/construction-hero.jpg" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Professional Construction Services | Grun Terra Limited" },
+    { name: "twitter:description", content: "Quality construction services with broad vision, honest service, and great value. Get your free quote today!" },
+    { name: "twitter:image", content: "/images/construction-hero.jpg" },
+    { name: "robots", content: "index, follow" },
+    { name: "geo.region", content: "US" },
+    { name: "geo.placename", content: "Construction Services" }
 ];
 
 const Home = () => {
@@ -39,7 +52,7 @@ const Home = () => {
                         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white ">
                             Broad Vision
                             <br />
-                            Honest Service
+                            <span className=" text-[#f39c3c]">Honest Service</span>
                             <br />
                             Great Value
                         </h1>
@@ -71,29 +84,30 @@ const Home = () => {
                             </div>
                             
                             <p className="text-gray-600 leading-relaxed">
-                                In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready.
+                                With over two decades of experience in the construction industry, Grun Terra Limited has established itself as a trusted partner for residential, commercial, and infrastructure development projects. We combine traditional craftsmanship with modern technology to deliver exceptional results.
                             </p>
-                            
+
                             {/* Quote Block */}
                             <div className="bg-gray-50 border-l-4 border-[#f39c3c] pl-6 py-4">
                                 <p className="text-gray-700 italic">
-                                    In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready.
+                                    "Our commitment to quality, safety, and client satisfaction has made us the preferred choice for construction projects across the region. We don't just build structures; we build lasting relationships and communities."
                                 </p>
+                                <span className="text-sm text-gray-500 mt-2 block">— Leadership Team, Grun Terra Limited</span>
                             </div>
                             
                             {/* Statistics */}
                             <div className="grid grid-cols-3 gap-8 pt-8">
                                 <div className="text-center">
-                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">53K</div>
-                                    <div className="text-sm text-gray-600 font-medium">Layout Done</div>
+                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">500+</div>
+                                    <div className="text-sm text-gray-600 font-medium">Projects Completed</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">10K</div>
-                                    <div className="text-sm text-gray-600 font-medium">Projects Done</div>
+                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">20+</div>
+                                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">120</div>
-                                    <div className="text-sm text-gray-600 font-medium">Get Award</div>
+                                    <div className="text-3xl lg:text-4xl font-bold text-[#f39c3c] mb-2">98%</div>
+                                    <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +251,7 @@ const Home = () => {
                             </h2>
                             <div className="w-16 h-1 bg-[#f39c3c] mb-6"></div>
                             <p className="text-gray-600 leading-relaxed mb-8">
-                                You can use these sections to highlight the features of heading. Use these paragraphs to focus on the topic you want. Make sure you keep it short and attractive.
+                                Don't just take our word for it. Hear from our satisfied clients who have experienced our commitment to quality construction, timely delivery, and exceptional service across residential and commercial projects.
                             </p>
                             
                             {/* First testimonial under description */}
@@ -476,10 +490,13 @@ const Home = () => {
                     <div className="grid lg:grid-cols-3 items-center ">
                         {/* Left Side - CTA Content */}
                         <div className="lg:pr-8 span-col-1">
-                            <h2 className="text-3xl lg:text-xl font-bold font-heading text-gray-900 leading-tight mb-8">
-                                Looking For A Quality And Affordable constructor For Your{' '}
-                                <span className="text-[#2c5aa0]">Next Project?</span>
+                            <h2 className="text-3xl lg:text-4xl font-bold font-heading text-gray-900 leading-tight mb-8">
+                                Ready To Start Your{' '}
+                                <span className="text-[#f39c3c]">Construction Project?</span>
                             </h2>
+                            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                                From concept to completion, our experienced team delivers quality construction services on time and within budget. Let's bring your vision to life.
+                            </p>
                             
                             <a 
                                 href="#contact" 
