@@ -64,7 +64,7 @@ export default function Navigation() {
     return (
         <header className="absolute top-0 left-0 right-0 pt-6 pb-6 z-[9999] transition-all duration-300 border-b border-white/40 ">
             <div className="">
-                <div className="bg-transparent lg:bg-transparent bg-white/95 backdrop-blur-sm transition-all duration-300">
+                <div className="bg-transparent lg:bg-transparent bg-white/95  transition-all duration-300">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between">
                         <Link 

@@ -46,7 +46,7 @@ export const projects: Project[] = [
     id: 1,
     title: "A Great Hotel Project",
     category: "Commercial Development",
-    image: "/images/section_two_image.jpg",
+    image: "/images/project1.jpg",
     size: "large",
     alt: "A Great Hotel Project"
   },

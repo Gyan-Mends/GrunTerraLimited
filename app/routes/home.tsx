@@ -30,13 +30,13 @@ const Home = () => {
         <div className="w-full">
             {/* Hero Section */}
             <section
-                className="relative h-screen flex items-center"
-                style={{ backgroundImage: "url('/images/home-bg-1.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
+                className="relative h-screen flex items-center "
+                style={{ backgroundImage: "url('/images/construction2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
             >
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
-                    <div className="text-white max-w-3xl">
-                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white">
+                <div className="absolute inset-0 bg-black/60 "></div>
+                <div className="relative  max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
+                    <div className=" max-w-3xl">
+                        <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white ">
                             Broad Vision
                             <br />
                             Honest Service
@@ -47,8 +47,8 @@ const Home = () => {
                             Our goal then and now is to provide quality on time projects
                         </p>
                         <div className="mt-10 flex flex-wrap gap-4">
-                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition">Get Free Quote →</a>
-                            <a href="#contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition">Get In Touch</a>
+                            <a href="#quote" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded">Get Free Quote →</a>
+                            <a href="#contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded">Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -101,9 +101,9 @@ const Home = () => {
                         {/* Image */}
                         <div className="relative">
                             <img 
-                                src="/images/section_two_image.jpg" 
+                                src="/images/contructor2.jpg" 
                                 alt="Modern building architecture" 
-                                className="w-full h-[80vh] rounded-xl"
+                                className="w-full h-[60vh] rounded-xl"
                             />
                             {/* Orange border frame behind image - bottom and right only */}
                             <div className="absolute inset-0 border-b-4 border-r-4 border-[#f39c3c] transform translate-x-6 translate-y-6 z-10 rounded-xl"></div>
