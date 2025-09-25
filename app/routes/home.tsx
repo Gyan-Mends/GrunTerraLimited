@@ -122,7 +122,7 @@ const Home = () => {
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Services</span>
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                         </div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             What We Can Do
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -133,13 +133,13 @@ const Home = () => {
                     {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service) => (
-                            <div key={service.id} className="bg-white  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                            <div key={service.id} className="  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
                                 {/* Service Image */}
-                                <div className="relative h-48 overflow-hidden">
+                                <div className="relative h-48 rounded-tr-lg rounded-tl-lg overflow-hidden">
                                     <img 
                                         src={service.image} 
                                         alt={service.alt}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        className="w-full h-full rounded-tr-lg rounded-tl-lg object-cover group-hover:scale-110 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                                 </div>
@@ -169,7 +169,7 @@ const Home = () => {
                     <div className="text-center mt-16">
                         <a 
                             href="#contact" 
-                            className="inline-flex items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold  hover:bg-[#e8902f] transition-colors duration-300"
+                            className="inline-flex rounded items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold  hover:bg-[#e8902f] transition-colors duration-300 "
                         >
                             Get Free Consultation
                             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,13 +189,13 @@ const Home = () => {
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Recent Projects</span>
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                         </div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Recent Projects
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
                             Explore our portfolio of completed construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence.
                         </p>
-                        <button className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300">
+                        <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300">
                             View All Projects
                         </button>
                     </div>
@@ -210,7 +210,7 @@ const Home = () => {
                                         alt={project.alt} 
                                         className="w-full h-full object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-colors duration-300"></div>
                                     <div className={`absolute text-white ${project.size === 'large' || project.size === 'wide' ? 'bottom-6 left-6' : 'bottom-4 left-4'}`}>
                                         <h3 className={`font-semibold mb-${project.size === 'large' || project.size === 'wide' ? '2' : '1'} ${project.size === 'large' || project.size === 'wide' ? 'text-xl' : 'text-lg'}`}>
                                             {project.title}
@@ -232,7 +232,7 @@ const Home = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Left Side - Header Content */}
                         <div className="lg:pr-8">
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                                 What Our Clients Say
                             </h2>
                             <div className="w-16 h-1 bg-[#f39c3c] mb-6"></div>
@@ -241,12 +241,12 @@ const Home = () => {
                             </p>
                             
                             {/* First testimonial under description */}
-                            <div className="flex bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="flex bg-white shadow-sm hover:shadow-md rounded-lg transition-shadow duration-300">
                                 <div className="w-32  flex-shrink-0">
                                     <img 
                                         src={testimonials[0].image} 
                                         alt={testimonials[0].alt}
-                                        className="w-full h-52 object-cover  grayscale"
+                                        className="w-full h-52 rounded-tl-lg rounded-bl-lg object-cover  grayscale"
                                     />
                                 </div>
                                 <div className="flex-1 p-6 flex flex-col justify-between">
@@ -273,12 +273,12 @@ const Home = () => {
                         {/* Right Side - Two Testimonials */}
                         <div className="space-y-6">
                             {/* Second testimonial - top right */}
-                            <div className="flex bg-white  shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="flex bg-white rounded-lg  shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="w-40 h-52 flex-shrink-0">
                                     <img 
                                         src={testimonials[1].image} 
                                         alt={testimonials[1].alt}
-                                        className="w-full h-full object-cover  grayscale"
+                                        className="w-full h-full object-cover rounded-tl-lg rounded-bl-lg  grayscale"
                                     />
                                 </div>
                                 <div className="flex-1 p-4 flex flex-col justify-between">
@@ -302,12 +302,12 @@ const Home = () => {
                             </div>
 
                             {/* Third testimonial - bottom right */}
-                            <div className="flex bg-white  shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="flex bg-white  shadow-sm rounded-lg hover:shadow-md transition-shadow duration-300">
                             <div className="w-40 h-52 flex-shrink-0">
                             <img 
                                         src={testimonials[2].image} 
                                         alt={testimonials[2].alt}
-                                        className="w-full h-full object-cover  grayscale"
+                                        className="w-full h-full rounded-tl-lg rounded-bl-lg object-cover  grayscale"
                                     />
                                 </div>
                                 <div className="flex-1 p-4 flex flex-col justify-between">
@@ -344,7 +344,7 @@ const Home = () => {
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Latest News</span>
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                         </div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             News & Updates
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">

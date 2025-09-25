@@ -12,21 +12,21 @@ export const services: Service[] = [
     id: 1,
     title: "Residential Construction",
     description: "Custom home building and residential projects designed to meet your specific needs and lifestyle requirements.",
-    image: "/images/section_two_image.jpg",
+    image: "/images/construction-hero.jpg",
     alt: "Residential Construction"
   },
   {
     id: 2,
     title: "Commercial Projects",
     description: "Office buildings, retail spaces, and commercial developments built with precision and professional expertise.",
-    image: "/images/section_two_image.jpg",
+    image: "/images/resident2.jpg",
     alt: "Commercial Projects"
   },
   {
     id: 3,
     title: "Infrastructure Development",
     description: "Roads, bridges, and infrastructure projects that form the backbone of communities and economic growth.",
-    image: "/images/section_two_image.jpg",
+    image: "/images/resident3.jpg",
     alt: "Infrastructure Development"
   }
 ];
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     id: 2,
     title: "High Tower Building",
     category: "Residential",
-    image: "/images/section_two_image.jpg",
+    image: "/images/tower.jpg",
     size: "medium",
     alt: "High Tower Building"
   },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Skyscraper Project",
     category: "Commercial",
-    image: "/images/section_two_image.jpg",
+    image: "/images/scrapper.jpg",
     size: "medium",
     alt: "Skyscraper Project"
   },
