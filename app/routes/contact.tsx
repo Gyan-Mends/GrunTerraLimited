@@ -78,7 +78,7 @@ const Contact = () => {
             </section>
 
             {/* Contact Methods */}
-            <section className="py-16 bg-gray-50">
+            {/* <section className="py-16 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {contactMethods.map((method, index) => (
@@ -101,7 +101,7 @@ const Contact = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Contact Form & Info */}
             <section id="contact"  className="py-24 bg-white">

@@ -206,16 +206,5 @@ export const team: TeamMember[] = [
       email: "michael@grunterra.com"
     }
   },
-  {
-    id: 4,
-    name: "Emily Davis",
-    position: "Architecture Director",
-    bio: "Emily designs beautiful and functional spaces that exceed client expectations while maintaining structural integrity.",
-    image: "/images/section_two_image.jpg",
-    alt: "Emily Davis - Architecture Director",
-    social: {
-      linkedin: "#",
-      email: "emily@grunterra.com"
-    }
-  }
+  
 ];

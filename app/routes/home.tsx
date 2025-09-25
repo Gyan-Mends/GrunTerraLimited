@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { services, projects, testimonials, news, team } from "~/utils/data";
 
 export const meta = () => [
@@ -232,19 +233,19 @@ const Home = () => {
                     </div>
 
                     {/* Projects Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 rounded-lg lg:grid-cols-4 lg:grid-rows-2 gap-4">
                         {projects.map((project, index) => (
                             <div
                                 key={project.id}
-                                className={`relative group overflow-hidden  ${getProjectClasses(project.size, index)}`}
+                                className={`relative group overflow-hidden rounded-lg  ${getProjectClasses(project.size, index)}`}
                                 data-aos="zoom-in"
                                 data-aos-delay={index * 150}
                             >
-                                <div className={`${getProjectAspectRatio(project.size)} relative`}>
+                                <div className={`${getProjectAspectRatio(project.size)} relative rounded-lg`}>
                                     <img
                                         src={project.image}
                                         alt={project.alt}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full rounded-lg object-cover"
                                     />
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-colors duration-300"></div>
                                     <div className={`absolute text-white ${project.size === 'large' || project.size === 'wide' ? 'bottom-6 left-6' : 'bottom-4 left-4'}`}>
@@ -261,9 +262,11 @@ const Home = () => {
                     </div>
 
                     <div className="flex items-center justify-center py-10">
+                    <Link to="/projects">
                     <button className="bg-[#f39c3c] rounded text-white px-6 py-3  font-semibold hover:bg-[#e8902f] transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
                             View All Projects
                         </button>
+                    </Link>
                     </div>
                 </div>
             </section>
@@ -397,13 +400,13 @@ const Home = () => {
                     {/* News Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {news.map((article, index) => (
-                            <article key={article.id} className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300 group" data-aos="fade-up" data-aos-delay={index * 100}>
+                            <article key={article.id} className="bg-white shadow-sm rounded-tr-lg rounded-tl-lg hover:shadow-md transition-shadow duration-300 group" data-aos="fade-up" data-aos-delay={index * 100}>
                                 {/* News Image */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img 
                                         src={article.image} 
                                         alt={article.alt}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="w-full h-full  rounded-tr-lg rounded-tl-lg object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute top-4 left-4">
                                         <span className="bg-[#f39c3c] text-white px-3 py-1 text-xs font-medium">
@@ -462,15 +465,15 @@ const Home = () => {
                     </div>
 
                     {/* Team Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {team.map((member, index) => (
-                            <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center" data-aos="zoom-in" data-aos-delay={index * 150}>
+                            <div key={member.id} className="bg-white shadow-sm  rounded-tr-lg rounded-tl-lg hover:shadow-lg transition-all duration-300 group text-center" data-aos="zoom-in" data-aos-delay={index * 150}>
                                 {/* Team Member Image */}
                                 <div className="relative overflow-hidden">
                                     <img 
                                         src={member.image} 
                                         alt={member.alt}
-                                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="w-full h-64  rounded-tr-lg rounded-tl-lg object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                     
                                     {/* Social Links Overlay */}
@@ -544,7 +547,7 @@ const Home = () => {
                                 <img
                                     src="/images/cta.png"
                                     alt="Construction crane and building site"
-                                    className="!h-[120vh] w-[150vw] object-contain mix-blend-multiply"
+                                    className="!h-[120vh] w-[150vw] object-contain !mt-20 mix-blend-multiply"
                                     data-aos="zoom-in"
                                     data-aos-delay="200"
                                    
