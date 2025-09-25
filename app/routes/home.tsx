@@ -494,9 +494,7 @@ const Home = () => {
                                 Ready To Start Your{' '}
                                 <span className="text-[#f39c3c]">Construction Project?</span>
                             </h2>
-                            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                                From concept to completion, our experienced team delivers quality construction services on time and within budget. Let's bring your vision to life.
-                            </p>
+                           
                             
                             <a 
                                 href="#contact" 
