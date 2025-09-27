@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router";
 import { projects } from "~/utils/data";
 
 export const meta = () => [
@@ -15,70 +17,12 @@ export const meta = () => [
 
 const Projects = () => {
     const categories = ["All", "Residential", "Commercial", "Mixed Use", "Infrastructure"];
+    const [activeFilter, setActiveFilter] = useState("All");
 
-    const allProjects = [
-        ...projects,
-        {
-            id: 5,
-            title: "Luxury Villa Estate",
-            category: "Residential",
-            image: "/images/construction-hero.jpg",
-            size: "large" as const,
-            alt: "Luxury Villa Estate",
-            description: "A stunning luxury villa featuring modern architecture, premium finishes, and state-of-the-art amenities.",
-            completionDate: "March 2025",
-            client: "Private Residence",
-            location: "Beverly Hills, CA"
-        },
-        {
-            id: 6,
-            title: "Corporate Headquarters",
-            category: "Commercial",
-            image: "/images/resident2.jpg",
-            size: "wide" as const,
-            alt: "Corporate Headquarters",
-            description: "A modern 15-story corporate headquarters with sustainable design features and cutting-edge technology infrastructure.",
-            completionDate: "January 2025",
-            client: "Tech Solutions Inc.",
-            location: "Downtown City"
-        },
-        {
-            id: 7,
-            title: "Residential Complex",
-            category: "Mixed Use",
-            image: "/images/resident3.jpg",
-            size: "medium" as const,
-            alt: "Residential Complex",
-            description: "A mixed-use development combining residential units with retail spaces and community amenities.",
-            completionDate: "December 2024",
-            client: "Urban Development Corp",
-            location: "Midtown District"
-        },
-        {
-            id: 8,
-            title: "Highway Bridge Project",
-            category: "Infrastructure",
-            image: "/images/tower.jpg",
-            size: "wide" as const,
-            alt: "Highway Bridge Project",
-            description: "A major highway bridge construction project designed to improve regional transportation connectivity.",
-            completionDate: "October 2024",
-            client: "State Transportation Dept",
-            location: "Interstate 95"
-        },
-        {
-            id: 9,
-            title: "Shopping Center",
-            category: "Commercial",
-            image: "/images/scrapper.jpg",
-            size: "medium" as const,
-            alt: "Shopping Center",
-            description: "A modern shopping center featuring retail spaces, restaurants, and entertainment facilities.",
-            completionDate: "September 2024",
-            client: "Retail Properties LLC",
-            location: "Suburban Plaza"
-        }
-    ];
+    // Filter projects based on active filter
+    const filteredProjects = activeFilter === "All"
+        ? projects
+        : projects.filter(project => project.category === activeFilter);
 
     const getProjectClasses = (size: string, index: number) => {
         const gridItems = [
@@ -127,14 +71,7 @@ const Projects = () => {
                         <p className="text-lg text-white/90 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Explore our portfolio of successful construction projects that showcase our expertise, quality craftsmanship, and commitment to excellence across various sectors.
                         </p>
-                        <div className="mt-10" data-aos="fade-up" data-aos-delay="600">
-                            <a
-                                href="#portfolio"
-                                className="bg-[#f39c3c] text-white px-8 py-3 font-semibold hover:bg-[#e8902f] transition-colors duration-300 rounded"
-                            >
-                                View Portfolio
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -170,7 +107,12 @@ const Projects = () => {
                             {categories.map((category) => (
                                 <button
                                     key={category}
-                                    className="px-6 py-2 rounded-full border-2 border-[#f39c3c] text-[#f39c3c] hover:bg-[#f39c3c] hover:text-white transition-colors duration-300 font-medium"
+                                    onClick={() => setActiveFilter(category)}
+                                    className={`px-6 py-2 rounded-full border-2 border-[#f39c3c] font-medium transition-colors duration-300 ${
+                                        activeFilter === category
+                                            ? "bg-[#f39c3c] text-white"
+                                            : "text-[#f39c3c] hover:bg-[#f39c3c] hover:text-white"
+                                    }`}
                                 >
                                     {category}
                                 </button>
@@ -199,9 +141,10 @@ const Projects = () => {
 
                     {/* Masonry Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 sm:px-6 lg:px-8">
-                        {allProjects.map((project, index) => (
-                            <div
+                        {filteredProjects.map((project, index) => (
+                            <Link
                                 key={project.id}
+                                to={`/projects/${project.id}`}
                                 className={`relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${getProjectClasses(project.size, index)}`}
                             >
                                 <div className={`${getProjectAspectRatio(project.size)} relative`}>
@@ -230,16 +173,16 @@ const Projects = () => {
 
                                         {/* View Details Button */}
                                         <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
-                                            <button className="text-[#f39c3c] font-medium flex items-center hover:text-white transition-colors duration-300">
+                                            <span className="text-[#f39c3c] font-medium flex items-center hover:text-white transition-colors duration-300">
                                                 View Details
                                                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                                 </svg>
-                                            </button>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -367,27 +310,27 @@ const Projects = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-[#f39c3c]">
+            <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
+                    <h2 className="text-3xl lg:text-4xl font-bold  mb-6 font-heading">
                         Ready to Start Your Next Project?
                     </h2>
-                    <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className=" text-lg mb-8 max-w-2xl mx-auto">
                         Let us help you bring your construction vision to life. Contact us today for a free consultation and project estimate.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a
-                            href="/contact"
-                            className="bg-white text-[#f39c3c] px-8 py-4 font-semibold rounded hover:bg-gray-100 transition-colors duration-300"
+                        <Link
+                            to="/contact"
+                            className="bg-[#f39c3c] text-white px-8 py-4 font-semibold rounded  duration-300"
                         >
                             Start Your Project
-                        </a>
-                        <a
-                            href="/services"
-                            className="border-2 border-white text-white px-8 py-4 font-semibold rounded hover:bg-white hover:text-[#f39c3c] transition-colors duration-300"
+                        </Link>
+                        <Link
+                            to="/services"
+                            className="border-2 border-[#f39c3c] text-[#f39c3c] px-8 py-4 font-semibold rounded hover:bg-white hover:text-[#f39c3c] transition-colors duration-300"
                         >
                             Our Services
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

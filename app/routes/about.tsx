@@ -1,4 +1,5 @@
 import { team } from "~/utils/data";
+import {Link} from "react-router"
 
 export const meta = () => [
     { title: "About Us | Grun Terra Limited | Leading Construction Company" },
@@ -110,6 +111,7 @@ const About = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
                             </div>
+                           
                             <p className="text-gray-600 leading-relaxed">
                                 To deliver exceptional construction services that exceed client expectations through innovative solutions, quality craftsmanship, and unwavering commitment to safety. We strive to build not just structures, but lasting relationships and stronger communities.
                             </p>
@@ -126,6 +128,7 @@ const About = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
                             </div>
+                          
                             <p className="text-gray-600 leading-relaxed">
                                 To be the leading construction company recognized for transforming communities through sustainable building practices, cutting-edge technology, and exceptional project delivery. We envision a future where every structure we build contributes to a better tomorrow.
                             </p>
@@ -198,13 +201,13 @@ const About = () => {
             </section>
 
             {/* Statistics Section */}
-            <section className="py-24 bg-gray-900 text-white">
+            <section className="py-24 bg-gray-50 ">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16" data-aos="fade-up">
                         <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading">
                             Our Achievements
                         </h2>
-                        <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        <p className=" max-w-2xl mx-auto leading-relaxed">
                             Numbers that reflect our commitment to excellence and client satisfaction.
                         </p>
                     </div>
@@ -220,7 +223,7 @@ const About = () => {
                                 <div className="text-4xl lg:text-5xl font-bold text-[#f39c3c] mb-3">
                                     {stat.number}
                                 </div>
-                                <div className="text-gray-300 font-medium">
+                                <div className=" font-medium">
                                     {stat.label}
                                 </div>
                             </div>
@@ -246,7 +249,7 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {team.map((member, index) => (
                             <div key={member.id} className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 group text-center rounded-xl overflow-hidden" data-aos="zoom-in" data-aos-delay={index * 150}>
                                 <div className="relative overflow-hidden">
@@ -294,27 +297,27 @@ const About = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-[#f39c3c]">
+            <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
+                    <h2 className="text-3xl lg:text-4xl font-bold  mb-6 font-heading">
                         Ready to Work With Us?
                     </h2>
-                    <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className=" text-lg mb-8 max-w-2xl mx-auto">
                         Let's discuss your construction project and see how we can bring your vision to life with our expertise and commitment to excellence.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                        <a
-                            href="/contact"
-                            className="bg-white text-[#f39c3c] px-8 py-3 font-semibold rounded hover:bg-gray-100 transition-colors duration-300"
+                        <Link
+                            to="/contact"
+                            className="bg-[#f39c3c] text-white px-8 py-3 font-semibold rounded   duration-300"
                         >
                             Get In Touch
-                        </a>
-                        <a
-                            href="/projects"
-                            className="border-2 border-white text-white px-8 py-3 font-semibold rounded hover:bg-white hover:text-[#f39c3c] transition-colors duration-300"
+                        </Link>
+                        <Link
+                            to="/projects"
+                            className="border-2 border-[#f39c3c] text-[#f39c3c] px-8 py-3 font-semibold rounded hover:bg-white hover:text-[#f39c3c] transition-colors duration-300"
                         >
                             View Our Work
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

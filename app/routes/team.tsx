@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { team } from "~/utils/data";
 
 export const meta = () => [
@@ -202,9 +203,15 @@ const Team = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {extendedTeam.slice(0, 4).map((member, index) => (
-                            <div key={member.id} className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 group text-center rounded-xl overflow-hidden" data-aos="zoom-in" data-aos-delay={index * 150}>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {team.map((member, index) => (
+                            <Link
+                                key={member.id}
+                                to={`/team/${member.id}`}
+                                className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 group text-center rounded-xl overflow-hidden"
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 150}
+                            >
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={member.image}
@@ -215,14 +222,24 @@ const Team = () => {
                                     <div className="absolute inset-0 bg-[#f39c3c]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                         <div className="flex space-x-4">
                                             {member.social.linkedin && (
-                                                <a href={member.social.linkedin} className="text-white hover:text-gray-200 transition-colors">
+                                                <a
+                                                    href={member.social.linkedin}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-white hover:text-gray-200 transition-colors"
+                                                >
                                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                                                     </svg>
                                                 </a>
                                             )}
                                             {member.social.email && (
-                                                <a href={`mailto:${member.social.email}`} className="text-white hover:text-gray-200 transition-colors">
+                                                <a
+                                                    href={`mailto:${member.social.email}`}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="text-white hover:text-gray-200 transition-colors"
+                                                >
                                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                     </svg>
@@ -233,7 +250,7 @@ const Team = () => {
                                 </div>
 
                                 <div className="p-6">
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#f39c3c] transition-colors">
                                         {member.name}
                                     </h3>
                                     <p className="text-[#f39c3c] font-medium mb-3">
@@ -243,7 +260,7 @@ const Team = () => {
                                         {member.bio}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -365,7 +382,7 @@ const Team = () => {
             </section>
 
             {/* Careers CTA */}
-            <section className="py-24 bg-[#f39c3c]">
+            {/* <section className="py-24 bg-[#f39c3c]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
                     <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
                         Join Our Team
@@ -393,7 +410,7 @@ const Team = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Team Recognition */}
             <section className="py-16 bg-white">

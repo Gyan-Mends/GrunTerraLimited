@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const meta = () => [
     { title: "Contact Us | Grun Terra Limited | Get Your Free Construction Quote" },
     { name: "description", content: "Contact Grun Terra Limited for your construction needs. Get free quotes, project consultations, and expert advice. Call us at (555) 123-4567 or visit our office." },
@@ -12,6 +14,12 @@ export const meta = () => [
 ];
 
 const Contact = () => {
+    const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+    const toggleFAQ = (index: number) => {
+        setOpenFAQ(openFAQ === index ? null : index);
+    };
+
     const contactMethods = [
         {
             icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
@@ -374,18 +382,26 @@ const Contact = () => {
             </section>
 
             {/* Map Section */}
-            <section className="h-96 bg-gray-300 relative">
-                <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                    <div className="text-center">
-                        <svg className="w-16 h-16 text-gray-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <p className="text-gray-600 text-lg">
-                            Interactive Map Coming Soon
+            <section className="py-16 bg-gray-50">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+                            Visit Our Office
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Find us at our convenient location. We're always happy to meet with you in person to discuss your construction project needs.
                         </p>
-                        <p className="text-gray-500 text-sm mt-2">
-                            123 Construction Avenue, Building City, BC 12345
-                        </p>
+                    </div>
+                    <div className="h-[500px] bg-gray-300 relative overflow-hidden rounded-xl shadow-lg">
+                        <iframe
+                            className="w-full h-full border-0 rounded-xl"
+                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7940.717275457141!2d-0.15672750000000002!3d5.6611625!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1758813587653!5m2!1sen!2sgh"
+                            loading="lazy"
+                            allowFullScreen
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Grun Terra Limited Office Location"
+                        >
+                        </iframe>
                     </div>
                 </div>
             </section>
@@ -402,7 +418,7 @@ const Contact = () => {
                         </p>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {[
                             {
                                 question: "How long does a typical construction project take?",
@@ -429,14 +445,37 @@ const Contact = () => {
                                 answer: "We understand that changes may be necessary. We maintain clear communication throughout the project and handle change orders professionally with transparent pricing and timeline adjustments."
                             }
                         ].map((faq, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-sm">
-                                <div className="p-6">
-                                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                                <button
+                                    onClick={() => toggleFAQ(index)}
+                                    className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                                >
+                                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
                                         {faq.question}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
-                                        {faq.answer}
-                                    </p>
+                                    <div className="flex-shrink-0">
+                                        <svg
+                                            className={`w-5 h-5 text-[#f39c3c] transform transition-transform duration-200 ${
+                                                openFAQ === index ? 'rotate-180' : ''
+                                            }`}
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                        openFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                    }`}
+                                >
+                                    <div className="px-6 pb-6">
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {faq.answer}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         ))}

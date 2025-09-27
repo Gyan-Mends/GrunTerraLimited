@@ -334,12 +334,12 @@ const Services = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-gray-900">
+            <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-heading">
+                    <h2 className="text-3xl lg:text-4xl font-bold  mb-6 font-heading">
                         Ready to Start Your Project?
                     </h2>
-                    <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className=" text-lg mb-8 max-w-2xl mx-auto">
                         Contact us today for a free consultation and see how we can bring your construction vision to life with professional expertise and quality craftsmanship.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -351,7 +351,7 @@ const Services = () => {
                         </a>
                         <a
                             href="/projects"
-                            className="border-2 border-white text-white px-8 py-4 font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors duration-300"
+                            className="border-2 border-[#f39c3c]  px-8 py-4 font-semibold rounded hover:bg-white text-[#f39c3c] transition-colors duration-300"
                         >
                             View Our Projects
                         </a>

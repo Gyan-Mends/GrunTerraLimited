@@ -73,8 +73,8 @@ const Home = () => {
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
-                            <a href="/contact/#contact" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded">Get Free Quote →</a>
-                            <a href="/contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded">Get In Touch</a>
+                            <Link to="/contact#contact" className="bg-[#f39c3c] text-white px-6 py-3  font-semibold hover:opacity-90 transition rounded-lg">Get Free Quote →</Link>
+                            <Link to="/contact" className="border border-white/80 text-white px-6 py-3  font-semibold hover:bg-white hover:text-[#0f6b3a] transition rounded-lg">Get In Touch</Link>
                         </div>
                     </div>
                 </div>
@@ -201,15 +201,15 @@ const Home = () => {
 
                     {/* Call to Action */}
                     <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
-                        <a
-                            href="#contact"
+                        <Link
+                            to="/contact#contact"
                             className="inline-flex rounded items-center px-8 py-3 bg-[#f39c3c] text-white font-semibold  hover:bg-[#e8902f] transition-colors duration-300 "
                         >
                             Get Free Consultation
                             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -456,7 +456,7 @@ const Home = () => {
                             <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Our Team</span>
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
                         </div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Meet Our Experts
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -527,8 +527,8 @@ const Home = () => {
                             </h2>
                            
                             
-                            <a 
-                                href="#contact" 
+                            <Link
+                                to="/contact#contact"
                                 className="inline-flex items-center bg-[#f39c3c] text-white px-8 py-4 font-semibold hover:bg-[#f39c3c] transition-colors duration-300 group"
                             >
                                 <span>Request A Quote</span>
@@ -537,7 +537,7 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Right Side - Construction Image */}
