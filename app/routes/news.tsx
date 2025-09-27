@@ -47,7 +47,7 @@ const News = () => {
                 }}
             >
                 <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 w-full">
                     <div className="max-w-3xl">
                         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             News & <span className="text-[#f39c3c]">Updates</span>
@@ -61,7 +61,7 @@ const News = () => {
 
             {/* Featured Article */}
             <section className="py-16 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-12">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
@@ -127,7 +127,7 @@ const News = () => {
 
             {/* Filter and Search */}
             <section className="py-16 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 font-heading">
                             All News Articles
@@ -171,7 +171,7 @@ const News = () => {
 
             {/* Articles Grid */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredNews.slice(1).map((article) => ( // Skip first article as it's featured
                             <Link
@@ -254,7 +254,7 @@ const News = () => {
 
             {/* Related Topics */}
             <section className="py-16 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
                         Explore Related Topics
                     </h3>

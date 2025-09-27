@@ -28,7 +28,7 @@ const About = () => {
                 }}
             >
                 <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 w-full">
                     <div className="max-w-3xl">
                         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6" data-aos="fade-up" data-aos-delay="200">
                             About <span className="text-[#f39c3c]">Grun Terra</span>
@@ -42,7 +42,7 @@ const About = () => {
 
             {/* Company Story Section */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
                         <div className="space-y-8" data-aos="fade-right">
@@ -88,7 +88,7 @@ const About = () => {
 
             {/* Mission & Vision Section */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
@@ -139,7 +139,7 @@ const About = () => {
 
             {/* Core Values Section */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16" data-aos="fade-up">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Core Values
@@ -202,7 +202,7 @@ const About = () => {
 
             {/* Statistics Section */}
             <section className="py-24 bg-gray-50 ">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16" data-aos="fade-up">
                         <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading">
                             Our Achievements
@@ -234,7 +234,7 @@ const About = () => {
 
             {/* Team Section */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>

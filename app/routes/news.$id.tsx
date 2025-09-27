@@ -52,7 +52,7 @@ const NewsDetail = () => {
                 >
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
-                <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16">
+                <div className="relative max-w-4xl mx-auto px-2 sm:px-4 lg:px-8 w-full pb-16">
                     <div className="mb-4">
                         <span className="bg-[#f39c3c] text-white px-4 py-2 rounded-full text-sm font-medium">
                             {article.category}
@@ -90,7 +90,7 @@ const NewsDetail = () => {
 
             {/* Article Content */}
             <section className="py-24 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto px-2 sm:px-4 lg:px-8">
                     {/* Article Body */}
                     <div className="max-w-none">
                         {/* Lead Paragraph */}
@@ -186,7 +186,7 @@ const NewsDetail = () => {
             {/* Related Articles */}
             {relatedArticles.length > 0 && (
                 <section className="py-24 bg-gray-50">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                                 Related Articles

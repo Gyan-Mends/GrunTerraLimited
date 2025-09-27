@@ -48,7 +48,7 @@ const Home = () => {
                 style={{ backgroundImage: "url('/images/construction2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
             >
                 <div className="absolute inset-0 bg-black/60 "></div>
-                <div className="relative  max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 w-full pt-24">
                     <div className=" max-w-3xl">
                         <h1
                             className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md text-white "
@@ -82,7 +82,7 @@ const Home = () => {
 
             {/* About Section */}
             <section id="about" className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
                         <div className="space-y-8" data-aos="fade-right">
@@ -143,7 +143,7 @@ const Home = () => {
             
             {/* What We Can Do Section */}
             <section id="services" className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     {/* Section Header */}
                     <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
@@ -381,7 +381,7 @@ const Home = () => {
             
             {/* News Section */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     {/* Section Header */}
                     <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">
@@ -448,7 +448,7 @@ const Home = () => {
 
             {/* Our Team Section */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     {/* Section Header */}
                     <div className="text-center mb-16" data-aos="fade-up">
                         <div className="flex items-center justify-center space-x-2 mb-4">

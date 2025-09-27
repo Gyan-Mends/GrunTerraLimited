@@ -155,7 +155,7 @@ const Team = () => {
 
             {/* Team Overview */}
             <section className="py-16 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="w-8 h-1 bg-[#f39c3c]"></div>
@@ -193,7 +193,7 @@ const Team = () => {
 
             {/* Leadership Team */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Leadership Team
@@ -268,7 +268,7 @@ const Team = () => {
 
             {/* Departments */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Departments
@@ -333,7 +333,7 @@ const Team = () => {
 
             {/* Company Culture & Values */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Team Values
@@ -414,7 +414,7 @@ const Team = () => {
 
             {/* Team Recognition */}
             <section className="py-16 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center">
                         <h3 className="text-2xl font-bold text-gray-900 mb-8">
                             Awards & Recognition

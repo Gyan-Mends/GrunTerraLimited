@@ -54,7 +54,7 @@ const ProjectDetail = () => {
                 >
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16">
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 w-full pb-16">
                     <div className="max-w-3xl">
                         <div className="mb-4">
                             <span className="bg-[#f39c3c] text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -73,8 +73,8 @@ const ProjectDetail = () => {
 
             {/* Project Details */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-3 gap-12">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
                         {/* Main Content */}
                         <div className="lg:col-span-2">
                             {/* Project Gallery */}
@@ -285,7 +285,7 @@ const ProjectDetail = () => {
             {/* Related Projects */}
             {relatedProjects.length > 0 && (
                 <section className="py-24 bg-gray-50">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                                 Related Projects

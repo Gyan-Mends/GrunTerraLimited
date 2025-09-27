@@ -46,7 +46,7 @@ const TeamMemberDetail = () => {
         <div className="w-full">
             {/* Hero Section */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Member Photo */}
                         <div className="relative">
@@ -267,7 +267,7 @@ const TeamMemberDetail = () => {
             {/* Other Team Members */}
             {otherMembers.length > 0 && (
                 <section className="py-24 bg-gray-50">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                         <div className="text-center mb-16">
                             <div className="flex items-center justify-center space-x-2 mb-4">
                                 <div className="w-8 h-1 bg-[#f39c3c]"></div>

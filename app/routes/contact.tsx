@@ -87,7 +87,7 @@ const Contact = () => {
 
             {/* Contact Methods */}
             {/* <section className="py-16 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {contactMethods.map((method, index) => (
                             <div key={index} className="text-center bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
@@ -113,7 +113,7 @@ const Contact = () => {
 
             {/* Contact Form & Info */}
             <section id="contact"  className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Contact Form */}
                         <div data-aos="fade-right">
@@ -383,7 +383,7 @@ const Contact = () => {
 
             {/* Map Section */}
             <section className="py-16 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Visit Our Office

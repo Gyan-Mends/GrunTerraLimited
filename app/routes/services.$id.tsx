@@ -97,7 +97,7 @@ const ServiceDetail = () => {
                 >
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16">
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 w-full pb-16">
                     <div className="max-w-3xl">
                         <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-white mb-6">
                             {service.title}
@@ -111,7 +111,7 @@ const ServiceDetail = () => {
 
             {/* Service Details */}
             <section className="py-24 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Content */}
                         <div>
@@ -199,7 +199,7 @@ const ServiceDetail = () => {
 
             {/* Process */}
             <section className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                             Our Process
@@ -264,7 +264,7 @@ const ServiceDetail = () => {
             {/* Related Projects */}
             {relatedProjects.length > 0 && (
                 <section className="py-24 bg-white">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
                                 Related Projects

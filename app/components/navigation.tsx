@@ -36,7 +36,7 @@ export default function Navigation() {
     return (
         <header className="absolute top-0 left-0 right-0 pt-6 pb-6 z-[9999] transition-all duration-300 border-b border-white/40 ">
             <div className="">
-                <div className="bg-transparent lg:bg-transparent bg-white/95  transition-all duration-300">
+                <div className="bg-transparent lg:bg-transparent  transition-all duration-300  lg:shadow-none">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between">
                         <Link 
@@ -88,9 +88,9 @@ export default function Navigation() {
                             aria-label="Toggle mobile menu"
                         >
                             {mobileMenuOpen ? (
-                                <X className="w-6 h-6" />
+                                <X className="w-6 h-6 text-white" />
                             ) : (
-                                <Menu className="w-6 h-6" />
+                                <Menu className="w-6 h-6 text-white" />
                             )}
                         </button>
                         </div>
@@ -98,22 +98,37 @@ export default function Navigation() {
 
                     {/* Mobile Navigation */}
                     {mobileMenuOpen && (
-                        <nav className="lg:hidden mt-4 pb-4 border-t border-orange-400 pt-4 animate-fade-in bg-white/95 backdrop-blur-sm">
-                            <div className="flex flex-col space-y-4">
+                        <nav className="lg:hidden mt-6 pb-6 border-t border-[#f39c3c]/20 pt-6 animate-fade-in bg-white backdrop-blur-sm ">
+                            <div className="flex flex-col space-y-2 px-4">
                                 {mobileNavigation.map((item) => (
                                     <Link
                                         key={item.name}
                                         to={item.to}
-                                        className={`font-medium transition-colors duration-200 py-2 ${
+                                        className={`font-medium transition-all duration-200 py-3 px-4 rounded-lg border-l-4 ${
                                             isActive(item.to)
-                                                ? 'text-[#f39c3c]'
-                                                : 'text-black hover:text-orange-600'
+                                                ? 'text-[#f39c3c] bg-[#f39c3c]/10 border-[#f39c3c]'
+                                                : 'text-gray-700 hover:text-[#f39c3c] hover:bg-[#f39c3c]/5 border-transparent hover:border-[#f39c3c]/30'
                                         }`}
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
                                     </Link>
                                 ))}
+
+                                {/* Mobile Social Links */}
+                                <div className="mt-6 pt-4 border-t border-gray-200">
+                                    <div className="flex justify-center space-x-6">
+                                        <a href="#" aria-label="Facebook" className="text-gray-600 hover:text-[#f39c3c] transition-colors">
+                                            <Facebook className="w-6 h-6" />
+                                        </a>
+                                        <a href="#" aria-label="Twitter" className="text-gray-600 hover:text-[#f39c3c] transition-colors">
+                                            <Twitter className="w-6 h-6" />
+                                        </a>
+                                        <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-[#f39c3c] transition-colors">
+                                            <Users className="w-6 h-6" />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </nav>
                     )}
